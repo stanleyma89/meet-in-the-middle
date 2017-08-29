@@ -21,12 +21,12 @@ var map = new google.maps.Map(document.getElementById('map'), {
  });
 
 //  Places markers on all location in 'markers'
-for (var i = 0; i < markers.length; i++) {
-  var marker = new google.maps.Marker({
-     position: markers[i],
-     map: map
-   });
-  };
+// for (var i = 0; i < markers.length; i++) {
+//   var marker = new google.maps.Marker({
+//      position: markers[i],
+//      map: map
+//    });
+//   };
 
 //  Creates rectangular boundary using all cooridates in 'locations'
   var bound = new google.maps.LatLngBounds();
@@ -34,8 +34,7 @@ for (var i = 0; i < markers.length; i++) {
    bound.extend( new google.maps.LatLng(locations[i][0], locations[i][1]) );
  };
 
-// Finds center point of recanglular boundary created above and places marker
-// Stores center location in 'center'
+// Finds center point of recanglular boundary created above and places marker. Stores center location in 'center'
   var center = { lng: parseFloat(bound.getCenter().lng()), lat: parseFloat(bound.getCenter().lat())};
   var marker = new google.maps.Marker({
     position: center,
@@ -55,8 +54,8 @@ for (var i = 0; i < markers.length; i++) {
       zoom: 11,
       center: awal
     }
-    map = new google.maps.Map(document.getElementById('map'), mapOptions);
-    directionsDisplay.setMap(map);
+    // map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    // directionsDisplay.setMap(map);
     var i;
       directionsServices = [];
       directionsDisplays = [];
@@ -80,8 +79,8 @@ for (var i = 0; i < markers.length; i++) {
           } else alert("Directions request failed:"+status);
         });
       }}
-  google.maps.event.addDomListener(window, 'load', initialize);
 
+      google.maps.event.addDomListener(window, 'load', initialize);
 // Takes center point and creates radius as well as searches establishments within radius
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
