@@ -1,6 +1,8 @@
 var map;
 
+// Initializes map
 function initMap() {
+
  var bitmaker = {lat: 43.647649, lng: -79.387131};
  // var operaHouse = {lat: 43.659213, lng: -79.348781};
  var brampton = {lat: 43.698739, lng: -79.781257};
@@ -12,41 +14,40 @@ function initMap() {
          [43.698739, -79.781257],
          [43.887714, -79.438603]];
 
+// Creates map and sets starting view and zoom
 var map = new google.maps.Map(document.getElementById('map'), {
    center: {lat: 43.6532, lng: -79.3832},
    zoom: 11
  });
 
+//  Places markers on all location in 'markers'
 for (var i = 0; i < markers.length; i++) {
-
   var marker = new google.maps.Marker({
      position: markers[i],
      map: map
    });
   };
 
+//  Creates rectangular boundary using all cooridates in 'locations'
   var bound = new google.maps.LatLngBounds();
    for (i = 0; i < locations.length; i++) {
    bound.extend( new google.maps.LatLng(locations[i][0], locations[i][1]) );
  };
 
-// OTHER CODE
-  console.log(parseFloat(bound.getCenter().lng()))
+// Finds center point of recanglular boundary created above and places marker
+// Stores center location in 'center'
   var center = { lng: parseFloat(bound.getCenter().lng()), lat: parseFloat(bound.getCenter().lat())};
-  console.log(center)
   var marker = new google.maps.Marker({
     position: center,
     map: map
   });
 
-// <<<<<<< HEAD
-// -----------------new test
-  //=======================================================
+// Initializes directions services
   var directionsDisplay;
   var directionsService = new google.maps.DirectionsService();
   var map;
 
-
+// Changes display parameters of map (may not need one at start?)
   function initialize() {
     directionsDisplay = new google.maps.DirectionsRenderer();
     var awal = new google.maps.LatLng(center);
@@ -81,7 +82,7 @@ for (var i = 0; i < markers.length; i++) {
       }}
   google.maps.event.addDomListener(window, 'load', initialize);
 
-// =======
+// Takes center point and creates radius as well as searches establishments within radius
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
     service.nearbySearch({
@@ -118,5 +119,4 @@ for (var i = 0; i < markers.length; i++) {
   });
   circle.bindTo('center', marker, 'position');
 
-// >>>>>>> master
 }
