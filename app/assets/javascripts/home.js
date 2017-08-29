@@ -9,10 +9,10 @@ function initMap() {
  var rich = {lat: 43.887714, lng: -79.438603};
  var markers = [bitmaker, brampton, rich];
  var locations = [
-         [43.647649, -79.387131],
+         [43.643482, -79.387143],
         //  [43.659213, -79.348781],
-         [43.698739, -79.781257],
-         [43.887714, -79.438603]];
+         [43.725611, -79.452116],
+         [43.775479, -79.257900]];
 
 // Creates map and sets starting view and zoom
 var map = new google.maps.Map(document.getElementById('map'), {
@@ -62,7 +62,7 @@ var map = new google.maps.Map(document.getElementById('map'), {
       for (i = 0; i < locations.length; i++) {
         directionsServices[i] = new google.maps.DirectionsService();
         var start = new google.maps.LatLng(locations[i][0], locations[i][1]);
-        var end = new google.maps.LatLng(locations[2][0], locations[2][1]);
+        // var end = new google.maps.LatLng(locations[2][0], locations[2][1]);
 
         var request = {
             origin: start,
@@ -81,6 +81,7 @@ var map = new google.maps.Map(document.getElementById('map'), {
       }}
 
       google.maps.event.addDomListener(window, 'load', initialize);
+
 // Takes center point and creates radius as well as searches establishments within radius
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
@@ -117,5 +118,26 @@ var map = new google.maps.Map(document.getElementById('map'), {
     fillColor: '#AA0000 '
   });
   circle.bindTo('center', marker, 'position');
+
+  var geocoder = new google.maps.Geocoder();
+  var address = '27 Garcia Street, Markham ON, Canada L3R 4R8';
+
+  if (geocoder) {
+     geocoder.geocode({ 'address': address }, function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+           console.log(results[0]);
+        var address_lng = results[0].geometry.viewport.b.b;
+        var address_lat = results[0].geometry.viewport.f.b;
+        var address = [address_lat, address_lng];
+        var marker = new google.maps.Marker({
+          position: address,
+          map: map
+        });
+        }
+        else {
+           console.log("Geocoding failed: " + status);
+        }
+     });
+  }
 
 }
