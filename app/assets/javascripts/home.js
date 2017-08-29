@@ -13,13 +13,8 @@ function initMap() {
          [43.887714, -79.438603]];
 
 var map = new google.maps.Map(document.getElementById('map'), {
-<<<<<<< HEAD
-   center: {lat: 43.6532, lng: -79.4832},
-   zoom: 10
-=======
    center: {lat: 43.6532, lng: -79.3832},
    zoom: 11
->>>>>>> master
  });
 
 for (var i = 0; i < markers.length; i++) {
@@ -44,7 +39,7 @@ for (var i = 0; i < markers.length; i++) {
     map: map
   });
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
   //=======================================================
   var Center = new google.maps.LatLng(43.647649, -79.387131);
   var directionsDisplay;
@@ -75,9 +70,13 @@ for (var i = 0; i < markers.length; i++) {
 
     // var start = new google.maps.LatLng(18.210885, -67.140884);
     // var end = new google.maps.LatLng(18.211685, -67.141684);
+
+
+for (var i = 0; i < markers.length; i++) {
+
     var request = {
-      origin: bitmaker,
-      destination: rich,
+      origin: markers[i],
+      destination: center,
       travelMode: google.maps.TravelMode.DRIVING
     };
     directionsService.route(request, function(result, status) {
@@ -90,7 +89,8 @@ for (var i = 0; i < markers.length; i++) {
   }
 
   google.maps.event.addDomListener(window, 'load', initialize);
-=======
+}
+// =======
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
     service.nearbySearch({
@@ -127,5 +127,5 @@ for (var i = 0; i < markers.length; i++) {
   });
   circle.bindTo('center', marker, 'position');
 
->>>>>>> master
+// >>>>>>> master
 }
