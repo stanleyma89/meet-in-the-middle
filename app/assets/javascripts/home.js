@@ -1,3 +1,5 @@
+var map;
+
 function initMap() {
  var bitmaker = {lat: 43.647649, lng: -79.387131};
  // var operaHouse = {lat: 43.659213, lng: -79.348781};
@@ -11,8 +13,13 @@ function initMap() {
          [43.887714, -79.438603]];
 
 var map = new google.maps.Map(document.getElementById('map'), {
+<<<<<<< HEAD
    center: {lat: 43.6532, lng: -79.4832},
    zoom: 10
+=======
+   center: {lat: 43.6532, lng: -79.3832},
+   zoom: 11
+>>>>>>> master
  });
 
 for (var i = 0; i < markers.length; i++) {
@@ -37,6 +44,7 @@ for (var i = 0; i < markers.length; i++) {
     map: map
   });
 
+<<<<<<< HEAD
   //=======================================================
   var Center = new google.maps.LatLng(43.647649, -79.387131);
   var directionsDisplay;
@@ -82,4 +90,42 @@ for (var i = 0; i < markers.length; i++) {
   }
 
   google.maps.event.addDomListener(window, 'load', initialize);
+=======
+  infowindow = new google.maps.InfoWindow();
+  var service = new google.maps.places.PlacesService(map);
+    service.nearbySearch({
+      location: center,
+      radius: 1000,
+      type: ['restaurant'],
+    }, callback);
+
+  function callback(results, status) {
+    if (status === google.maps.places.PlacesServiceStatus.OK) {
+      for (var i = 0; i < results.length; i++) {
+        createMarker(results[i]);
+      }
+    }
+  }
+
+  function createMarker(place) {
+    var placeLoc = place.geometry.location;
+    var marker = new google.maps.Marker({
+      map: map,
+      position: place.geometry.location
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent(place.name);
+      infowindow.open(map, this);
+    });
+  }
+
+  var circle = new google.maps.Circle({
+    map: map,
+    radius: 1000,    // 10 miles in metres
+    fillColor: '#AA0000 '
+  });
+  circle.bindTo('center', marker, 'position');
+
+>>>>>>> master
 }
