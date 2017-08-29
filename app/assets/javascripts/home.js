@@ -1,9 +1,9 @@
 function initMap() {
  var bitmaker = {lat: 43.647649, lng: -79.387131};
  var operaHouse = {lat: 43.659213, lng: -79.348781};
- var brampton = {lat: 43.698739,lng: -79.781257};
- var rich = {lat: 43.887714,lng: -79.438603}
- var markers= [bitmaker, operaHouse, brampton, rich];
+ var brampton = {lat: 43.698739, lng: -79.781257};
+ var rich = {lat: 43.887714, lng: -79.438603};
+ var markers = [bitmaker, operaHouse, brampton, rich];
  var locations = [
          [43.647649, -79.387131],
          [43.659213, -79.348781],
