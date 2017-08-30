@@ -119,19 +119,20 @@ var map = new google.maps.Map(document.getElementById('map'), {
   });
   circle.bindTo('center', marker, 'position');
 
+// Geocoder works, inputing an address will result in longitude and latitude as a return
   var geocoder = new google.maps.Geocoder();
   var address = '27 Garcia Street, Markham ON, Canada L3R 4R8';
 
   if (geocoder) {
      geocoder.geocode({ 'address': address }, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
-           console.log(results[0]);
         var address_lng = results[0].geometry.viewport.b.b;
         var address_lat = results[0].geometry.viewport.f.b;
-        var address = [address_lat, address_lng];
+        var address_geo = [address_lat, address_lng];
+        console.log(address_geo);
         var marker = new google.maps.Marker({
-          position: address,
-          map: map
+          map: map,
+          position: address_geo
         });
         }
         else {
