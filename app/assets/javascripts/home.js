@@ -1,6 +1,15 @@
 // Initializes map
 
-function initMap() {
+ var bitmaker = {lat: 43.647649, lng: -79.387131};
+ // var operaHouse = {lat: 43.659213, lng: -79.348781};
+ var brampton = {lat: 43.698739, lng: -79.781257};
+ var rich = {lat: 43.887714, lng: -79.438603};
+ var markers = [bitmaker, brampton, rich];
+ var locations = [
+         [43.643482, -79.387143],
+        //  [43.659213, -79.348781],
+         [43.725611, -79.452116],
+         [43.775479, -79.257900]];
 
 // Creates map and sets starting view and zoom
 var map = new google.maps.Map(document.getElementById('map'), {
@@ -133,6 +142,7 @@ function reload(locations){
       }}
 
       google.maps.event.addDomListener(window, 'load', initialize);
+
 // Takes center point and creates radius as well as searches establishments within radius
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
@@ -171,5 +181,27 @@ function reload(locations){
   //   fillColor: '#AA0000 '
   // });
   // circle.bindTo('center', markers, 'position');
+
+// Geocoder works, inputing an address will result in longitude and latitude as a return
+  var geocoder = new google.maps.Geocoder();
+  var address = '27 Garcia Street, Markham ON, Canada L3R 4R8';
+
+  if (geocoder) {
+     geocoder.geocode({ 'address': address }, function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+        var address_lng = results[0].geometry.viewport.b.b;
+        var address_lat = results[0].geometry.viewport.f.b;
+        var address_geo = [address_lat, address_lng];
+        console.log(address_geo);
+        var marker = new google.maps.Marker({
+          map: map,
+          position: address_geo
+        });
+        }
+        else {
+           console.log("Geocoding failed: " + status);
+        }
+     });
+  }
 
 }
