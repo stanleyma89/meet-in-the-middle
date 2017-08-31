@@ -3021,3 +3021,17 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 25ms (Views: 23.4ms)
 
 
+Started GET "/home" for 127.0.0.1 at 2017-08-31 15:32:02 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 39ms (Views: 35.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-08-31 15:32:35 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 44ms (Views: 41.9ms)
+
+
