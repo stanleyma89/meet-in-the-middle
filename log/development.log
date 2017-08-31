@@ -3000,3 +3000,24 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 27ms (Views: 25.3ms)
 
 
+Started GET "/home" for 127.0.0.1 at 2017-08-31 15:26:34 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 31ms (Views: 27.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-08-31 15:26:42 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 30ms (Views: 28.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-08-31 15:26:48 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 25ms (Views: 23.4ms)
+
+
