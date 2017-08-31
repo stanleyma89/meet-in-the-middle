@@ -129,7 +129,7 @@ var map = new google.maps.Map(document.getElementById('map'), {
         var address_lng = results[0].geometry.viewport.b.b;
         var address_lat = results[0].geometry.viewport.f.b;
         var address_geo = [address_lat, address_lng];
-        console.log(address_geo);
+        // console.log(address_geo);
         var marker = new google.maps.Marker({
           map: map,
           position: address_geo
