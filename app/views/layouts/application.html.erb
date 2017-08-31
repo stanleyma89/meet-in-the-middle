@@ -13,8 +13,8 @@
         <h1 class="logo">MeetInTheMiddle</h1>
 
         <nav class="site-nav">
-          <% if current_user %>
-            <%= link_to "Logout", :logout, method: :delete %>
+          <% if session[:user_id] != nil %>
+            <%= link_to "Logout", :logout%>
           <% else %>
             <%= link_to "Register", new_user_path %> |
             <%= link_to "Login", :login %>
