@@ -91,10 +91,13 @@ var map = new google.maps.Map(document.getElementById('map'), {
       type: ['restaurant'],
     }, callback);
 
+
   function callback(results, status) {
+    var photos = [];
     if (status === google.maps.places.PlacesServiceStatus.OK) {
       for (var i = 0; i < results.length; i++) {
         createMarker(results[i]);
+        // photos.push(results[i].photos)
       }
     }
   }
@@ -129,7 +132,6 @@ var map = new google.maps.Map(document.getElementById('map'), {
         var address_lng = results[0].geometry.viewport.b.b;
         var address_lat = results[0].geometry.viewport.f.b;
         var address_geo = [address_lat, address_lng];
-        console.log(address_geo);
         var marker = new google.maps.Marker({
           map: map,
           position: address_geo
@@ -140,5 +142,40 @@ var map = new google.maps.Map(document.getElementById('map'), {
         }
      });
   }
+
+  // $.ajax({
+  //   url: "https://api.yelp.com/oauth2/token",
+  //   method: 'POST',
+  //   data: {
+  //     grant_type: "client_credentials",
+  //     client_id: "MzSVn3KS16HXnD_sGY76-A",
+  //     client_secret: "J3Zebm26hesPxF8qPtXhcpoflu4Xfu5vO0D1Wd2uDvn1IeQHB0Sie8ta6VTl6G4E"
+  //   },
+  //   dataType: 'json'
+  // }).always(function(data) {
+  //     console.log('Hello');
+  //     console.log(data);
+  // });
+// var access_token ="dq3yg5i2xGXpNc20jpr9aLkt7VFIyXnIM4srHkgs52DnLL14ZVHEmc4uf03Kzd8iJ3GbeJ-go4A7PsUlCnyEg3EfamrgXuznWaVykxtUCCuXV53GZlQqSsFfIV-oWXYx"
+
+var ul = document.querySelector('ul');
+
+  $.ajax({
+    // url: 'https://api.yelp.com/v3/businesses/search?term=delis&latitude=37.786882&longitude=-122.399972',
+    url: '/home',
+    method: 'GET',
+    dataType: 'json'
+  }).always(function(data) {
+      console.log(data);
+      for (var i = 0; i < data.businesses.length; i++) {
+      var li = document.createElement('li');
+      var img = document.createElement('img');
+      // img.src = photos[i][0].html_attributions
+      img.src = data.businesses[i].image_url;
+      li.append(img);
+      ul.append(li);
+    }
+
+  });
 
 }
