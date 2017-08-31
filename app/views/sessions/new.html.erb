@@ -1,17 +1,5 @@
-<h1>Log In</h1>
+<h1>Login</h1>
 
-<%= form_for :session, url: sessions_path do |f| %>
+<%= render 'form' %>
 
-<div class='field'>
-<%=f.label :email %>
-<%=f.email_field :email %>
-</div>
-
-<div class='field'>
-<%=f.label :password %>
-<%=f.password_field :password %>
-
-
-<%= f.submit 'Login!' %>
-
-<% end %>
+<%= link_to 'Back', home_index_url %>
