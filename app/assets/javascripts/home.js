@@ -1,23 +1,5 @@
 var map;
 
-
-  $.ajax({
-    url: '/home',
-    method: 'GET',
-    dataType: 'json'
-  }).always(function(data) {
-      console.log(data);
-      for (var i = 0; i < data.businesses.length; i++) {
-      var ul = document.querySelector('ul');
-      var li = document.createElement('li');
-      var img = document.createElement('img');
-      img.src = data.businesses[i].image_url;
-      li.append(img);
-      ul.append(li);
-    }
-
-  });
-
 // Initializes map
 function initMap() {
 
@@ -84,9 +66,35 @@ function initMap() {
       map.setZoom(17);
     }
 
-
     submit.addEventListener('click', function(){
-      reload(locations);
+      var center = reload(locations);
+
+      $.ajax({
+        url: '/home',
+        method: 'GET',
+        data: { 'lat': center["lat"], 'lng': center["lng"]},
+        dataType: 'json'
+      }).always(function(data) {
+          console.log(data);
+          for (var i = 0; i < data.businesses.length; i++) {
+          var ul = document.querySelector('ul');
+          var li = document.createElement('li');
+          var img = document.createElement('img');
+          var pName = document.createElement('p');
+          var pAddress = document.createElement('p');
+          var pRating = document.createElement('p');
+          img.src = data.businesses[i].image_url;
+          pName.innerHTML = data.businesses[i].name;
+          pAddress.innerHTML = data.businesses[i].location.display_address;
+          pRating.innerHTML = data.businesses[i].rating;
+          li.append(img);
+          ul.append(li);
+          ul.append(pName);
+          ul.append(pAddress);
+          ul.append(pRating);
+        }
+
+      });
     })
 
   });
@@ -143,8 +151,6 @@ function initMap() {
       }
     }
 
-
-
     // var circle = new google.maps.Circle({
     //   map: map,
     //   radius: 1000,
@@ -153,6 +159,7 @@ function initMap() {
     // circle.bindTo('center', markers, 'position');
 
     initialize(center, centerMarker);
+    return center;
 }
 
 
@@ -206,45 +213,45 @@ function initMap() {
       google.maps.event.addDomListener(window, 'load', initialize);
 
 // Takes center point and creates radius as well as searches establishments within radius
-  infowindow = new google.maps.InfoWindow();
-  var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-      location: center,
-      radius: 1000,
-      type: ['restaurant'],
-    }, callback);
-
-
-  function callback(results, status) {
-    var photos = [];
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
-      for (var i = 0; i < results.length; i++) {
-        createMarker(results[i]);
-        // photos.push(results[i].photos)
-      }
-    }
-  }
-
-
-  function createMarker(place) {
-    var placeLoc = place.geometry.location;
-    var marker = new google.maps.Marker({
-      map: map,
-      position: place.geometry.location
-    });
-
-    google.maps.event.addListener(marker, 'click', function() {
-      infowindow.setContent(place.name);
-      infowindow.open(map, this);
-    });
-  }
-
-  var circle = new google.maps.Circle({
-    map: map,
-    radius: 1000,    // 10 miles in metres
-    fillColor: '#AA0000 '
-  });
-  circle.bindTo('center', marker, 'position');
+  // infowindow = new google.maps.InfoWindow();
+  // var service = new google.maps.places.PlacesService(map);
+  //   service.nearbySearch({
+  //     location: center,
+  //     radius: 1000,
+  //     type: ['restaurant'],
+  //   }, callback);
+  //
+  //
+  // function callback(results, status) {
+  //   var photos = [];
+  //   if (status === google.maps.places.PlacesServiceStatus.OK) {
+  //     for (var i = 0; i < results.length; i++) {
+  //       createMarker(results[i]);
+  //       // photos.push(results[i].photos)
+  //     }
+  //   }
+  // }
+  //
+  //
+  // function createMarker(place) {
+  //   var placeLoc = place.geometry.location;
+  //   var marker = new google.maps.Marker({
+  //     map: map,
+  //     position: place.geometry.location
+  //   });
+  //
+  //   google.maps.event.addListener(marker, 'click', function() {
+  //     infowindow.setContent(place.name);
+  //     infowindow.open(map, this);
+  //   });
+  // }
+  //
+  // var circle = new google.maps.Circle({
+  //   map: map,
+  //   radius: 1000,    // 10 miles in metres
+  //   fillColor: '#AA0000 '
+  // });
+  // circle.bindTo('center', marker, 'position');
 
 // Geocoder works, inputing an address will result in longitude and latitude as a return
   // var geocoder = new google.maps.Geocoder();
