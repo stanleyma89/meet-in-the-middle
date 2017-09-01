@@ -1,90 +1,75 @@
-// Initializes map
+var map;
 
+// Initializes map
 function initMap() {
 
 // Creates map and sets starting view and zoom
-var map = new google.maps.Map(document.getElementById('map'), {
-   center: {lat: 43.6532, lng: -79.3832},
-   zoom: 11
- });
-
-var input = document.getElementById('pac-input');
-var output = document.getElementById('pac-output');
-var submit = document.getElementById('submit');
-
-// var autocompleteA = new google.maps.places.Autocomplete(input);
-var autocompleteB = new google.maps.places.Autocomplete(output);
-
-// autocompleteA.bindTo('bounds', map);
-autocompleteB.bindTo('bounds', map);
-
-// autocompleteA.addListener('place_changed', function(){
-//
-//   var placeA = autocompleteA.getPlace();
-//   // console.log(placeA);
-//   if (placeA.geometry.viewport) {
-//     map.fitBounds(placeA.geometry.viewport);
-//   } else {
-//     map.setCenter(placeA.geometry.viewport);
-//     map.setZoom(17);
-//   }
-// });
-
-
-
-var locations = [];
-
-autocompleteB.addListener('place_changed', function(){
-var lonLat = [];
-
-  var placeB = autocompleteB.getPlace();
-
-  lonLat.push(placeB.geometry.viewport.f.b);
-  lonLat.push(placeB.geometry.viewport.b.b);
-
-  locations.push(lonLat);
-
-   console.log(locations);
-  //  initMap(locations)
-  // reload(locations);
-
-  if (placeB.geometry.viewport) {
-    map.fitBounds(placeB.geometry.viewport);
-  } else {
-    map.setCenter(placeB.geometry.viewport);
-    map.setZoom(17);
-  }
-
-
-  submit.addEventListener('click', function(){
-    reload(locations);
-  })
-
-});
-
-
-
-
-function reload(locations){
-  console.log(locations);
-//  Creates rectangular boundary using all cooridates in 'locations'
-  var bound = new google.maps.LatLngBounds();
-   for (i = 0; i < locations.length; i++) {
-   bound.extend( new google.maps.LatLng(locations[i][0], locations[i][1]) );
- };
-
-// Finds center point of recanglular boundary created above and places marker. Stores center location in 'center'
-  var center = { lng: parseFloat(bound.getCenter().lng()), lat: parseFloat(bound.getCenter().lat())};
-  // console.log(center);
-  var centerMarker = new google.maps.Marker({
-    position: center,
-    map: map
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 43.6532, lng: -79.3832},
+    zoom: 11
   });
-  initialize(center, centerMarker);
 
+  var input = document.getElementById('pac-input');
+  var output = document.getElementById('pac-output');
+  var submit = document.getElementById('submit');
+
+  // var autocompleteA = new google.maps.places.Autocomplete(input);
+  var autocompleteB = new google.maps.places.Autocomplete(output);
+
+  // autocompleteA.bindTo('bounds', map);
+  autocompleteB.bindTo('bounds', map);
+
+  var locations = [];
+
+  autocompleteB.addListener('place_changed', function() {
+  var lonLat = [];
+
+    var placeB = autocompleteB.getPlace();
+
+    lonLat.push(placeB.geometry.viewport.f.b);
+    lonLat.push(placeB.geometry.viewport.b.b);
+
+    locations.push(lonLat);
+
+     console.log(locations);
+    //  initMap(locations)
+    // reload(locations);
+
+    if (placeB.geometry.viewport) {
+      map.fitBounds(placeB.geometry.viewport);
+    } else {
+      map.setCenter(placeB.geometry.viewport);
+      map.setZoom(17);
+    }
+
+
+    submit.addEventListener('click', function(){
+      reload(locations);
+    })
+
+  });
+
+  function reload(locations) {
+    // console.log(locations);
+  //  Creates rectangular boundary using all cooridates in 'locations'
+    var bound = new google.maps.LatLngBounds();
+     for (i = 0; i < locations.length; i++) {
+     bound.extend( new google.maps.LatLng(locations[i][0], locations[i][1]) );
+   };
+
+  // Finds center point of recanglular boundary created above and places marker. Stores center location in 'center'
+    var center = { lng: parseFloat(bound.getCenter().lng()), lat: parseFloat(bound.getCenter().lat())};
+    // console.log(center);
+    var centerMarker = new google.maps.Marker({
+      position: center,
+      map: map
+    });
+  
+    initialize(center, centerMarker);
 }
 
-//moved inside initialize function()
+
+// moved inside initialize function()
 // var directionsDisplay;
 // var directionsService = new google.maps.DirectionsService();
 
@@ -92,15 +77,12 @@ function reload(locations){
 // Changes display parameters of map (may not need one at start?)
   function initialize(center, centerMarker) {
 
-
-
-    // Initializes directions services
-      var directionsDisplay;
-      var directionsService = new google.maps.DirectionsService();
-
-
+  // Initializes directions services
+    var directionsDisplay;
+    var directionsService = new google.maps.DirectionsService();
 
     directionsDisplay = new google.maps.DirectionsRenderer();
+
     var awal = new google.maps.LatLng(center);
     var mapOptions = {
       zoom: 11,
@@ -108,13 +90,15 @@ function reload(locations){
     };
     // map = new google.maps.Map(document.getElementById('map'), mapOptions);
     // directionsDisplay.setMap(map);
+    //function clearMarkers() {
+
+
     var i;
       directionsServices = [];
       directionsDisplays = [];
       for (i = 0; i < locations.length; i++) {
         directionsServices[i] = new google.maps.DirectionsService();
         var start = new google.maps.LatLng(locations[i][0], locations[i][1]);
-
 
         var request = {
             origin: start,
@@ -130,9 +114,10 @@ function reload(locations){
             directionsDisplays[directionsDisplays.length-1].setDirections(response);
           } else alert("Directions request failed:"+status);
         });
-      }}
+  }}
 
       google.maps.event.addDomListener(window, 'load', initialize);
+
 // Takes center point and creates radius as well as searches establishments within radius
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
@@ -155,7 +140,6 @@ function reload(locations){
     var placeLoc = place.geometry.location;
     var markers = new google.maps.Marker({
       map: map,
-      icon: place.icon,
       position: place.geometry.location
     });
 
@@ -165,11 +149,15 @@ function reload(locations){
     });
   }
 
-  // var circle = new google.maps.Circle({
-  //   map: map,
-  //   radius: 1000,    // 10 miles in metres
-  //   fillColor: '#AA0000 '
-  // });
-  // circle.bindTo('center', markers, 'position');
-
+  function setMapOnAll(map) {
+        for (var i = 0; i < markers.length; i++) {
+          markers[i].setMap(map);
+        }
+      }
+  var circle = new google.maps.Circle({
+    map: map,
+    radius: 1000,
+    fillColor: '#AA0000'
+  });
+  circle.bindTo('center', markers, 'position');
 }
