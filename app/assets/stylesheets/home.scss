@@ -3,9 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #map {
   height: 50%;
-  width: 50%;
+  width: 100%;
 }
-
+/* Optional: Makes the sample page fill the window. */
 html, body {
   height: 100%;
   margin: 0;
@@ -15,3 +15,30 @@ html, body {
 img {
   width: 300px;
 }
+#pac-container {
+        padding-bottom: 12px;
+        margin-right: 12px;
+      }
+#pac-input, #pac-output {
+        background-color: #fff;
+        // font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 400px;
+      }
+#pac-input:focus {
+        border-color: #4d90fe;
+      }
+#locationField {
+        position: relative;
+        width: 480px;
+      }
+#autocomplete {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 99%;
+      }

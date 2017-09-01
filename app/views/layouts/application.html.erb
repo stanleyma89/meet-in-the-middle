@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>MeetInTheMiddle</title>
     <%= csrf_meta_tags %>
 
@@ -9,7 +10,31 @@
   </head>
 
   <body>
-    <%= yield %>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASpwU31pil4vam6eKSjDFpiQdUGuzSGU8&callback=initMap&libraries=geometry,places"></script>
-  </body>
+      <header class="site-header">
+        <h1 class="logo">MeetInTheMiddle</h1>
+
+        <nav class="site-nav">
+          <% if session[:user_id] != nil %>
+            <%= link_to "Logout", :logout%>
+          <% else %>
+            <%= link_to "Register", new_user_path %> |
+            <%= link_to "Login", :login %>
+          <% end %>
+        </nav>
+      </header>
+
+      <% flash.each do |key, message| %>
+        <div class="flash-<%= key %>"><%= message %></div>
+      <% end %>
+
+      <!-- <main> -->
+        <%= yield %>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwrmLv6COx0ygAhr9pKrEbDRcaoFQORyM&callback=initMap&libraries=geometry,places"></script>
+      <!-- </main> -->
+
+      <footer class="site-footer">
+        <small>Bitmaker Final Project (Best Group)</small>
+      </footer>
+    </body>
+
 </html>
