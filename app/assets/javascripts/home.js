@@ -1,5 +1,23 @@
 var map;
 
+
+  $.ajax({
+    url: '/home',
+    method: 'GET',
+    dataType: 'json'
+  }).always(function(data) {
+      console.log(data);
+      for (var i = 0; i < data.businesses.length; i++) {
+      var ul = document.querySelector('ul');
+      var li = document.createElement('li');
+      var img = document.createElement('img');
+      img.src = data.businesses[i].image_url;
+      li.append(img);
+      ul.append(li);
+    }
+
+  });
+
 // Initializes map
 function initMap() {
 
@@ -125,6 +143,8 @@ function initMap() {
       }
     }
 
+
+
     // var circle = new google.maps.Circle({
     //   map: map,
     //   radius: 1000,
@@ -205,6 +225,7 @@ function initMap() {
     }
   }
 
+
   function createMarker(place) {
     var placeLoc = place.geometry.location;
     var marker = new google.maps.Marker({
@@ -261,24 +282,6 @@ function initMap() {
   // });
 // var access_token ="dq3yg5i2xGXpNc20jpr9aLkt7VFIyXnIM4srHkgs52DnLL14ZVHEmc4uf03Kzd8iJ3GbeJ-go4A7PsUlCnyEg3EfamrgXuznWaVykxtUCCuXV53GZlQqSsFfIV-oWXYx"
 
-var ul = document.querySelector('ul');
 
-  $.ajax({
-    // url: 'https://api.yelp.com/v3/businesses/search?term=delis&latitude=37.786882&longitude=-122.399972',
-    url: '/home',
-    method: 'GET',
-    dataType: 'json'
-  }).always(function(data) {
-      console.log(data);
-      for (var i = 0; i < data.businesses.length; i++) {
-      var li = document.createElement('li');
-      var img = document.createElement('img');
-      // img.src = photos[i][0].html_attributions
-      img.src = data.businesses[i].image_url;
-      li.append(img);
-      ul.append(li);
-    }
-
-  });
 
 }
