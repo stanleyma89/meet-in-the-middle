@@ -13,23 +13,47 @@ function initMap() {
   var output = document.getElementById('pac-output');
   var submit = document.getElementById('submit');
 
-  // var autocompleteA = new google.maps.places.Autocomplete(input);
+  var autocompleteA = new google.maps.places.Autocomplete(input);
   var autocompleteB = new google.maps.places.Autocomplete(output);
 
-  // autocompleteA.bindTo('bounds', map);
+  autocompleteA.bindTo('bounds', map);
   autocompleteB.bindTo('bounds', map);
 
   var locations = [];
 
+  autocompleteA.addListener('place_changed', function() {
+    var lonLatA = [];
+
+    var placeA = autocompleteA.getPlace();
+
+    lonLatA.push(placeA.geometry.viewport.f.b);
+    lonLatA.push(placeA.geometry.viewport.b.b);
+
+    locations.push(lonLatA);
+
+    if (placeA.geometry.viewport) {
+      map.fitBounds(placeA.geometry.viewport);
+    } else {
+      map.setCenter(placeA.geometry.viewport);
+      map.setZoom(17);
+    }
+
+    console.log(locations);
+
+  })
+
   autocompleteB.addListener('place_changed', function() {
-  var lonLat = [];
+
+  var lonLatB = [];
 
     var placeB = autocompleteB.getPlace();
 
-    lonLat.push(placeB.geometry.viewport.f.b);
-    lonLat.push(placeB.geometry.viewport.b.b);
 
-    locations.push(lonLat);
+    lonLatB.push(placeB.geometry.viewport.f.b);
+    lonLatB.push(placeB.geometry.viewport.b.b);
+
+
+    locations.push(lonLatB);
 
      console.log(locations);
     //  initMap(locations)
@@ -64,7 +88,50 @@ function initMap() {
       position: center,
       map: map
     });
-  
+
+    infowindow = new google.maps.InfoWindow();
+    var service = new google.maps.places.PlacesService(map);
+      service.nearbySearch({
+        location: center,
+        radius: 1000,
+        type: ['restaurant'],
+      }, callback);
+
+    function callback(results, status) {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+          createMarker(results[i]);
+          // console.log(results[i]);
+        }
+      }
+    }
+
+    function createMarker(place) {
+      var placeLoc = place.geometry.location;
+      var markers = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location
+      });
+
+      google.maps.event.addListener(markers, 'click', function() {
+        infowindow.setContent(place.name);
+        infowindow.open(map, this);
+      });
+    }
+
+    function setMapOnAll(map) {
+      for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(map);
+      }
+    }
+
+    // var circle = new google.maps.Circle({
+    //   map: map,
+    //   radius: 1000,
+    //   fillColor: '#AA0000'
+    // });
+    // circle.bindTo('center', markers, 'position');
+
     initialize(center, centerMarker);
 }
 
@@ -119,45 +186,6 @@ function initMap() {
       google.maps.event.addDomListener(window, 'load', initialize);
 
 // Takes center point and creates radius as well as searches establishments within radius
-  infowindow = new google.maps.InfoWindow();
-  var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-      location: center,
-      radius: 1000,
-      type: ['restaurant'],
-    }, callback);
 
-  function callback(results, status) {
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
-      for (var i = 0; i < results.length; i++) {
-        createMarker(results[i]);
-        // console.log(results[i]);
-      }
-    }
-  }
 
-  function createMarker(place) {
-    var placeLoc = place.geometry.location;
-    var markers = new google.maps.Marker({
-      map: map,
-      position: place.geometry.location
-    });
-
-    google.maps.event.addListener(markers, 'click', function() {
-      infowindow.setContent(place.name);
-      infowindow.open(map, this);
-    });
-  }
-
-  function setMapOnAll(map) {
-        for (var i = 0; i < markers.length; i++) {
-          markers[i].setMap(map);
-        }
-      }
-  var circle = new google.maps.Circle({
-    map: map,
-    radius: 1000,
-    fillColor: '#AA0000'
-  });
-  circle.bindTo('center', markers, 'position');
 }
