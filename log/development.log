@@ -3771,3 +3771,23 @@ Processing by HomeController#index as JSON
 Completed 200 OK in 603ms (Views: 7.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/home" for 127.0.0.1 at 2017-09-01 12:11:28 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Started GET "/home" for 127.0.0.1 at 2017-09-01 12:11:29 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (504.1ms)
+Completed 200 OK in 1412ms (Views: 540.0ms | ActiveRecord: 0.0ms)
+
+
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 965ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-01 12:11:30 -0400
+Processing by HomeController#index as JSON
+Completed 200 OK in 1268ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
