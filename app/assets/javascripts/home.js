@@ -16,8 +16,8 @@ function initMap() {
   var autocompleteA = new google.maps.places.Autocomplete(input);
   var autocompleteB = new google.maps.places.Autocomplete(output);
 
-  autocompleteA.bindTo('bounds', map);
   autocompleteB.bindTo('bounds', map);
+  autocompleteA.bindTo('bounds', map);
 
   var locations = [];
 
@@ -35,7 +35,7 @@ function initMap() {
       map.fitBounds(placeA.geometry.viewport);
     } else {
       map.setCenter(placeA.geometry.viewport);
-      map.setZoom(17);
+      map.setZoom(12);
     }
 
     console.log(locations);
@@ -105,6 +105,7 @@ function initMap() {
     var bound = new google.maps.LatLngBounds();
      for (i = 0; i < locations.length; i++) {
      bound.extend( new google.maps.LatLng(locations[i][0], locations[i][1]) );
+     map.fitBounds(bound);
    };
 
   // Finds center point of recanglular boundary created above and places marker. Stores center location in 'center'
@@ -114,6 +115,7 @@ function initMap() {
       position: center,
       map: map
     });
+
 
     infowindow = new google.maps.InfoWindow();
     var service = new google.maps.places.PlacesService(map);
