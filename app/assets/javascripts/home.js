@@ -82,8 +82,10 @@ function initMap() {
 
     submit.addEventListener('click', function(){
 
+      for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(null);
+    }
       markers = [];
-
 
       var center = reload(locations);
 

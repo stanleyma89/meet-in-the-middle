@@ -3553,3 +3553,36 @@ Processing by HomeController#index as JSON
 Completed 200 OK in 1220ms (Views: 10.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/home" for 127.0.0.1 at 2017-09-02 18:16:11 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 243ms (Views: 80.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home?lat=43.77009405&lng=-79.20737704999999" for 127.0.0.1 at 2017-09-02 18:16:26 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.77009405", "lng"=>"-79.20737704999999"}
+Completed 200 OK in 536ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-02 18:16:48 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 461ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home?lat=43.731626299999995&lng=-79.3685011" for 127.0.0.1 at 2017-09-02 18:17:14 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.731626299999995", "lng"=>"-79.3685011"}
+Completed 200 OK in 421ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-02 18:17:37 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 198ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
