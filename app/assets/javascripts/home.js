@@ -1,4 +1,5 @@
 var map;
+var markers = [];
 
 // Initializes map
 function initMap() {
@@ -16,20 +17,27 @@ function initMap() {
   var autocompleteA = new google.maps.places.Autocomplete(input);
   var autocompleteB = new google.maps.places.Autocomplete(output);
 
-  autocompleteB.bindTo('bounds', map);
-  autocompleteA.bindTo('bounds', map);
+  // autocompleteA.bindTo('bounds', map);
+  // autocompleteB.bindTo('bounds', map);
 
   var locations = [];
 
   autocompleteA.addListener('place_changed', function() {
     var lonLatA = [];
 
+
     var placeA = autocompleteA.getPlace();
 
-    lonLatA.push(placeA.geometry.viewport.f.b);
-    lonLatA.push(placeA.geometry.viewport.b.b);
+    lonLatA.push(placeA.geometry.location.lat());
+    lonLatA.push(placeA.geometry.location.lng());
 
     locations.push(lonLatA);
+    var markerA = {lat: lonLatA[0], lng: lonLatA[1]};
+    var marker = new google.maps.Marker({
+      position: markerA,
+      map: map
+    });
+    markers.push(marker);
 
     if (placeA.geometry.viewport) {
       map.fitBounds(placeA.geometry.viewport);
@@ -49,12 +57,18 @@ function initMap() {
     var placeB = autocompleteB.getPlace();
 
 
-    lonLatB.push(placeB.geometry.viewport.f.b);
-    lonLatB.push(placeB.geometry.viewport.b.b);
+    lonLatB.push(placeB.geometry.location.lat());
+    lonLatB.push(placeB.geometry.location.lng());
 
 
     locations.push(lonLatB);
 
+    var markerB = {lat: lonLatB[0], lng: lonLatB[1]};
+    var marker = new google.maps.Marker({
+      position: markerB,
+      map: map
+    });
+    markers.push(marker);
      console.log(locations);
     //  initMap(locations)
     // reload(locations);
@@ -67,6 +81,10 @@ function initMap() {
     }
 
     submit.addEventListener('click', function(){
+
+      markers = [];
+
+
       var center = reload(locations);
 
       $.ajax({
