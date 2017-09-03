@@ -1,5 +1,6 @@
 var map;
 var markers = [];
+var slideVal = 500;
 
 // Initializes map
 function initMap() {
@@ -22,6 +23,17 @@ function initMap() {
 
   var locations = [];
 
+  // Allows users to select radius range
+
+  var slider = document.getElementById("myRange");
+  var output = document.getElementById("demo");
+  output.innerHTML = slider.value;
+  slider.oninput = function() {
+  output.innerHTML = this.value;
+  slideVal = this.value;
+  }
+
+
   autocompleteA.addListener('place_changed', function() {
     var lonLatA = [];
 
@@ -43,7 +55,7 @@ function initMap() {
       map.fitBounds(placeA.geometry.viewport);
     } else {
       map.setCenter(placeA.geometry.viewport);
-      map.setZoom(12);
+      map.setZoom(15);
     }
 
     console.log(locations);
@@ -77,8 +89,11 @@ function initMap() {
       map.fitBounds(placeB.geometry.viewport);
     } else {
       map.setCenter(placeB.geometry.viewport);
-      map.setZoom(17);
+      map.setZoom(15);
     }
+
+
+
 
     submit.addEventListener('click', function(){
 
@@ -92,7 +107,7 @@ function initMap() {
       $.ajax({
         url: '/home',
         method: 'GET',
-        data: { 'lat': center["lat"], 'lng': center["lng"]},
+        data: { 'lat': center["lat"], 'lng': center["lng"], 'radius': slideVal},
         dataType: 'json'
       }).always(function(data) {
           console.log(data);
@@ -118,6 +133,7 @@ function initMap() {
     })
 
   });
+
 
   function reload(locations) {
     // console.log(locations);
