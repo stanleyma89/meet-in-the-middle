@@ -1,4 +1,5 @@
 var map;
+var markers = [];
 
 // Initializes map
 function initMap() {
@@ -16,26 +17,33 @@ function initMap() {
   var autocompleteA = new google.maps.places.Autocomplete(input);
   var autocompleteB = new google.maps.places.Autocomplete(output);
 
-  autocompleteA.bindTo('bounds', map);
-  autocompleteB.bindTo('bounds', map);
+  // autocompleteA.bindTo('bounds', map);
+  // autocompleteB.bindTo('bounds', map);
 
   var locations = [];
 
   autocompleteA.addListener('place_changed', function() {
     var lonLatA = [];
 
+
     var placeA = autocompleteA.getPlace();
 
-    lonLatA.push(placeA.geometry.viewport.f.b);
-    lonLatA.push(placeA.geometry.viewport.b.b);
+    lonLatA.push(placeA.geometry.location.lat());
+    lonLatA.push(placeA.geometry.location.lng());
 
     locations.push(lonLatA);
+    var markerA = {lat: lonLatA[0], lng: lonLatA[1]};
+    var marker = new google.maps.Marker({
+      position: markerA,
+      map: map
+    });
+    markers.push(marker);
 
     if (placeA.geometry.viewport) {
       map.fitBounds(placeA.geometry.viewport);
     } else {
       map.setCenter(placeA.geometry.viewport);
-      map.setZoom(17);
+      map.setZoom(12);
     }
 
     console.log(locations);
@@ -49,12 +57,18 @@ function initMap() {
     var placeB = autocompleteB.getPlace();
 
 
-    lonLatB.push(placeB.geometry.viewport.f.b);
-    lonLatB.push(placeB.geometry.viewport.b.b);
+    lonLatB.push(placeB.geometry.location.lat());
+    lonLatB.push(placeB.geometry.location.lng());
 
 
     locations.push(lonLatB);
 
+    var markerB = {lat: lonLatB[0], lng: lonLatB[1]};
+    var marker = new google.maps.Marker({
+      position: markerB,
+      map: map
+    });
+    markers.push(marker);
      console.log(locations);
     //  initMap(locations)
     // reload(locations);
@@ -66,9 +80,41 @@ function initMap() {
       map.setZoom(17);
     }
 
-
     submit.addEventListener('click', function(){
-      reload(locations);
+
+      for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(null);
+    }
+      markers = [];
+
+      var center = reload(locations);
+
+      $.ajax({
+        url: '/home',
+        method: 'GET',
+        data: { 'lat': center["lat"], 'lng': center["lng"]},
+        dataType: 'json'
+      }).always(function(data) {
+          console.log(data);
+          for (var i = 0; i < data.businesses.length; i++) {
+          var ul = document.querySelector('ul');
+          var li = document.createElement('li');
+          var img = document.createElement('img');
+          var pName = document.createElement('p');
+          var pAddress = document.createElement('p');
+          var pRating = document.createElement('p');
+          img.src = data.businesses[i].image_url;
+          pName.innerHTML = data.businesses[i].name;
+          pAddress.innerHTML = data.businesses[i].location.display_address;
+          pRating.innerHTML = data.businesses[i].rating;
+          li.append(img);
+          ul.append(li);
+          ul.append(pName);
+          ul.append(pAddress);
+          ul.append(pRating);
+        }
+
+      });
     })
 
   });
@@ -79,6 +125,7 @@ function initMap() {
     var bound = new google.maps.LatLngBounds();
      for (i = 0; i < locations.length; i++) {
      bound.extend( new google.maps.LatLng(locations[i][0], locations[i][1]) );
+     map.fitBounds(bound);
    };
 
   // Finds center point of recanglular boundary created above and places marker. Stores center location in 'center'
@@ -88,6 +135,7 @@ function initMap() {
       position: center,
       map: map
     });
+
 
     infowindow = new google.maps.InfoWindow();
     var service = new google.maps.places.PlacesService(map);
@@ -133,6 +181,7 @@ function initMap() {
     // circle.bindTo('center', markers, 'position');
 
     initialize(center, centerMarker);
+    return center;
 }
 
 
@@ -186,6 +235,82 @@ function initMap() {
       google.maps.event.addDomListener(window, 'load', initialize);
 
 // Takes center point and creates radius as well as searches establishments within radius
+  // infowindow = new google.maps.InfoWindow();
+  // var service = new google.maps.places.PlacesService(map);
+  //   service.nearbySearch({
+  //     location: center,
+  //     radius: 1000,
+  //     type: ['restaurant'],
+  //   }, callback);
+  //
+  //
+  // function callback(results, status) {
+  //   var photos = [];
+  //   if (status === google.maps.places.PlacesServiceStatus.OK) {
+  //     for (var i = 0; i < results.length; i++) {
+  //       createMarker(results[i]);
+  //       // photos.push(results[i].photos)
+  //     }
+  //   }
+  // }
+  //
+  //
+  // function createMarker(place) {
+  //   var placeLoc = place.geometry.location;
+  //   var marker = new google.maps.Marker({
+  //     map: map,
+  //     position: place.geometry.location
+  //   });
+  //
+  //   google.maps.event.addListener(marker, 'click', function() {
+  //     infowindow.setContent(place.name);
+  //     infowindow.open(map, this);
+  //   });
+  // }
+  //
+  // var circle = new google.maps.Circle({
+  //   map: map,
+  //   radius: 1000,    // 10 miles in metres
+  //   fillColor: '#AA0000 '
+  // });
+  // circle.bindTo('center', marker, 'position');
+
+// Geocoder works, inputing an address will result in longitude and latitude as a return
+  // var geocoder = new google.maps.Geocoder();
+  // var address = '27 Garcia Street, Markham ON, Canada L3R 4R8';
+  //
+  // if (geocoder) {
+  //    geocoder.geocode({ 'address': address }, function (results, status) {
+  //       if (status == google.maps.GeocoderStatus.OK) {
+  //       var address_lng = results[0].geometry.viewport.b.b;
+  //       var address_lat = results[0].geometry.viewport.f.b;
+  //       var address_geo = [address_lat, address_lng];
+  //       var marker = new google.maps.Marker({
+  //         map: map,
+  //         position: address_geo
+  //       });
+  //       }
+  //       else {
+  //          console.log("Geocoding failed: " + status);
+  //       }
+  //    });
+  // }
+
+  // $.ajax({
+  //   url: "https://api.yelp.com/oauth2/token",
+  //   method: 'POST',
+  //   data: {
+  //     grant_type: "client_credentials",
+  //     client_id: "MzSVn3KS16HXnD_sGY76-A",
+  //     client_secret: "J3Zebm26hesPxF8qPtXhcpoflu4Xfu5vO0D1Wd2uDvn1IeQHB0Sie8ta6VTl6G4E"
+  //   },
+  //   dataType: 'json'
+  // }).always(function(data) {
+  //     console.log('Hello');
+  //     console.log(data);
+  // });
+// var access_token ="dq3yg5i2xGXpNc20jpr9aLkt7VFIyXnIM4srHkgs52DnLL14ZVHEmc4uf03Kzd8iJ3GbeJ-go4A7PsUlCnyEg3EfamrgXuznWaVykxtUCCuXV53GZlQqSsFfIV-oWXYx"
+
 
 
 }

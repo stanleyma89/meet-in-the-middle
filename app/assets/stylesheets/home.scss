@@ -4,13 +4,16 @@
 #map {
   height: 50%;
   width: 100%;
-
 }
 /* Optional: Makes the sample page fill the window. */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+img {
+  width: 300px;
 }
 #pac-container {
         padding-bottom: 12px;
