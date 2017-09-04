@@ -200,6 +200,7 @@ function autocomplete(autocompleteC) {
         dataType: 'json'
       }).always(function(data) {
           console.log(data);
+
           for (var i = 0; i < data.businesses.length; i++) {
           var ul = document.querySelector('#yelp_info');
           var li = document.createElement('li');
@@ -244,6 +245,19 @@ function autocomplete(autocompleteC) {
 
 
     });
+
+    var marker = new google.maps.Marker({
+      position: center,
+      map: map,
+    });
+
+    var circle = new google.maps.Circle({
+      map: map,
+      radius: slideVal * 2,    // 10 miles in metres
+      fillColor: '#AA0000'
+    });
+    circle.bindTo('center', marker, 'position');
+
   })
 
 });
@@ -303,12 +317,6 @@ function autocomplete(autocompleteC) {
     //   }
     // }
 
-    // var circle = new google.maps.Circle({
-    //   map: map,
-    //   radius: slideVal,
-    //   fillColor: '#AA0000'
-    // });
-    // circle.bindTo('center', marker, 'position');
 
 
     initialize(center, centerMarker);
@@ -338,6 +346,7 @@ function autocomplete(autocompleteC) {
     // map = new google.maps.Map(document.getElementById('map'), mapOptions);
     // directionsDisplay.setMap(map);
     //function clearMarkers() {
+
 
 
     var i;
