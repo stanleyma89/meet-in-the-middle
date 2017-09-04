@@ -1,9 +1,11 @@
 var map;
 var markers = [];
+var slideVal = 500;
 
 // Initializes map
-function initMap() {
 
+function initMap() {
+  var locations = [];
 // Creates map and sets starting view and zoom
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 43.6532, lng: -79.3832},
@@ -20,8 +22,103 @@ function initMap() {
   // autocompleteA.bindTo('bounds', map);
   // autocompleteB.bindTo('bounds', map);
 
-  var locations = [];
+  // Allows users to select radius range
 
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+    slider.oninput = function() {
+    output.innerHTML = this.value;
+    slideVal = this.value;
+    }
+
+
+  var addressContainer = document.getElementById("address-container");
+  var add = document.getElementById("add");
+  add.addEventListener("click", function(e){
+    var addressList = document.createElement("li");
+    var addressInput = document.createElement("input");
+    var autocompleteC = new google.maps.places.Autocomplete(addressInput);
+    autocomplete(autocompleteC);
+    addressList.id = "address"
+    addressInput.type = "text";
+    addressInput.id = "pac-input";
+    addressInput.placeholder = "Add Address";
+    addressList.append(addressInput);
+    addressContainer.append(addressList);
+  });
+
+
+
+function autocomplete(autocompleteC) {
+  autocompleteC.addListener('place_changed', function() {
+    var lonLatC = [];
+
+
+    var placeC = autocompleteC.getPlace();
+
+    lonLatC.push(placeC.geometry.location.lat());
+    lonLatC.push(placeC.geometry.location.lng());
+
+    locations.push(lonLatC);
+    var markerC = {lat: lonLatC[0], lng: lonLatC[1]};
+    var marker = new google.maps.Marker({
+      position: markerC,
+      map: map
+    });
+    markers.push(marker);
+
+    if (placeC.geometry.viewport) {
+      map.fitBounds(placeC.geometry.viewport);
+    } else {
+      map.setCenter(placeC.geometry.viewport);
+      map.setZoom(12);
+    }
+    // createMarker(lonLatC);
+    // console.log(locations);
+
+    // var markers = new google.maps.Marker({
+    //   map: map,
+    //   position: lonLatC
+    // });
+    // markers.setPosition(placeC.geometry.location);
+    // markers.setVisible(true);
+
+  })
+}
+
+////////////////////////////////////////////////////old code
+// function initMap() {
+//
+// // Creates map and sets starting view and zoom
+//   map = new google.maps.Map(document.getElementById('map'), {
+//     center: {lat: 43.6532, lng: -79.3832},
+//     zoom: 11
+//   });
+//
+//   var input = document.getElementById('pac-input');
+//   var output = document.getElementById('pac-output');
+//   var submit = document.getElementById('submit');
+//
+//   var autocompleteA = new google.maps.places.Autocomplete(input);
+//   var autocompleteB = new google.maps.places.Autocomplete(output);
+//
+//   // autocompleteA.bindTo('bounds', map);
+//   // autocompleteB.bindTo('bounds', map);
+//
+//   var locations = [];
+//
+//   // Allows users to select radius range
+//
+//   var slider = document.getElementById("myRange");
+//   var output = document.getElementById("demo");
+//   output.innerHTML = slider.value;
+//   slider.oninput = function() {
+//   output.innerHTML = this.value;
+//   slideVal = this.value;
+//   }
+//
+///////////////////////////////////////////////////////////////old code
   autocompleteA.addListener('place_changed', function() {
     var lonLatA = [];
 
@@ -43,7 +140,7 @@ function initMap() {
       map.fitBounds(placeA.geometry.viewport);
     } else {
       map.setCenter(placeA.geometry.viewport);
-      map.setZoom(12);
+      map.setZoom(15);
     }
 
     console.log(locations);
@@ -69,7 +166,7 @@ function initMap() {
       map: map
     });
     markers.push(marker);
-     console.log(locations);
+    //  console.log(locations);
     //  initMap(locations)
     // reload(locations);
 
@@ -77,8 +174,11 @@ function initMap() {
       map.fitBounds(placeB.geometry.viewport);
     } else {
       map.setCenter(placeB.geometry.viewport);
-      map.setZoom(17);
+      map.setZoom(15);
     }
+
+
+
 
     submit.addEventListener('click', function(){
 
@@ -88,16 +188,19 @@ function initMap() {
       markers = [];
 
       var center = reload(locations);
+      var categories = document.getElementById("categories");
+      var categoryValue = categories.options[categories.selectedIndex].value;
+
 
       $.ajax({
         url: '/home',
         method: 'GET',
-        data: { 'lat': center["lat"], 'lng': center["lng"]},
+        data: { 'lat': center["lat"], 'lng': center["lng"], 'radius': slideVal, 'term': categoryValue},
         dataType: 'json'
       }).always(function(data) {
           console.log(data);
           for (var i = 0; i < data.businesses.length; i++) {
-          var ul = document.querySelector('ul');
+          var ul = document.querySelector('#yelp_info');
           var li = document.createElement('li');
           var img = document.createElement('img');
           var pName = document.createElement('p');
@@ -112,12 +215,38 @@ function initMap() {
           ul.append(pName);
           ul.append(pAddress);
           ul.append(pRating);
+
+          var yelpLat = data.businesses[i].coordinates.latitude;
+          var yelpLong = data.businesses[i].coordinates.longitude;
+
+          var myLatlng = {lat: yelpLat, lng: yelpLong};
+
+          var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+          });
+
+          marker.setMap(map);
+
+          // var yelpBusinessName = data.businesses[i].name
+          //
+          // var infowindow = new google.maps.InfoWindow({
+          //   content: yelpBusinessName
+          // });
+          //
+          // google.maps.event.addListener(marker, 'click', function() {
+          //   infowindow.open(map, marker);
+          // })
+          // console.log(yelpBusinessName);
+
         }
 
-      });
-    })
 
-  });
+    });
+  })
+
+});
+
 
   function reload(locations) {
     // console.log(locations);
@@ -134,51 +263,52 @@ function initMap() {
     var centerMarker = new google.maps.Marker({
       position: center,
       map: map
+
     });
 
-
-    infowindow = new google.maps.InfoWindow();
-    var service = new google.maps.places.PlacesService(map);
-      service.nearbySearch({
-        location: center,
-        radius: 1000,
-        type: ['restaurant'],
-      }, callback);
-
-    function callback(results, status) {
-      if (status === google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < results.length; i++) {
-          createMarker(results[i]);
-          // console.log(results[i]);
-        }
-      }
-    }
-
-    function createMarker(place) {
-      var placeLoc = place.geometry.location;
-      var markers = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-      });
-
-      google.maps.event.addListener(markers, 'click', function() {
-        infowindow.setContent(place.name);
-        infowindow.open(map, this);
-      });
-    }
-
-    function setMapOnAll(map) {
-      for (var i = 0; i < markers.length; i++) {
-        markers[i].setMap(map);
-      }
-    }
+    // infowindow = new google.maps.InfoWindow();
+    // var service = new google.maps.places.PlacesService(map);
+    //   service.nearbySearch({
+    //     location: center,
+    //     radius: 1000,
+    //     type: ['restaurant'],
+    //   }, callback);
+    //
+    // function callback(results, status) {
+    //   if (status === google.maps.places.PlacesServiceStatus.OK) {
+    //     for (var i = 0; i < results.length; i++) {
+    //       createMarker(results[i]);
+    //       // console.log(results[i]);
+    //     }
+    //   }
+    // }
+    //
+    // function createMarker(place) {
+    //   var placeLoc = place.geometry.location;
+    //   var markers = new google.maps.Marker({
+    //     map: map,
+    //     position: place.geometry.location
+    //   });
+    //
+    //   google.maps.event.addListener(markers, 'click', function() {
+    //     infowindow.setContent(place.name);
+    //     infowindow.open(map, this);
+    //   });
+    // }
+    //
+    // function setMapOnAll(map) {
+    //   for (var i = 0; i < markers.length; i++) {
+    //     markers[i].setMap(map);
+    //   }
+    // }
 
     // var circle = new google.maps.Circle({
     //   map: map,
-    //   radius: 1000,
+    //   radius: slideVal,
     //   fillColor: '#AA0000'
     // });
-    // circle.bindTo('center', markers, 'position');
+    // circle.bindTo('center', marker, 'position');
+
 
     initialize(center, centerMarker);
     return center;
