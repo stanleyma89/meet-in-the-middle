@@ -3,11 +3,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(email: params[:email])
+    user = User.find_by(email: params[:email])
 
-    if @user && @user.authenticate(params[:password])
+    if user && user.authenticate(params[:password])
 
-      session[:user_id] = @user.id
+      session[:user_id] = user.id
 
       flash[:notice] = ' Successful! You are logged in! '
       redirect_to home_index_url

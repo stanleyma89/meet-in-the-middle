@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
 
-  def index
-
-  end
-
   def new
     @user = User.new
   end
@@ -12,10 +8,11 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      session[:user_id] = @user.id
       flash[:notice] = 'Account Succefully created'
       redirect_to home_index_path
     else
-      flash.now[:error] = 'Something went wrong, Pleaset try Again'
+      flash.now[:error] = 'Something went wrong, Please try Again'
       render :new
     end
   end
