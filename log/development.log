@@ -4868,3 +4868,10 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 298ms (Views: 95.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/home" for 127.0.0.1 at 2017-09-04 15:04:02 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 241ms (Views: 91.7ms | ActiveRecord: 0.0ms)
+
+
