@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
       session[:user_id] = @user.id
 
-      flash[:notice] = ' Successful! You are loged in! '
+      flash[:notice] = ' Successful! You are logged in! '
       redirect_to home_index_url
 
     else

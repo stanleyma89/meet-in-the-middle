@@ -1,11 +1,29 @@
 <%= stylesheet_link_tag    'home', media: 'all' %>
 <%= javascript_include_tag 'home' %>
+<div id = "add-address">
+  <button id = "add" type="button" name="add">Add Address</button>
+</div>
 <div id="pac-container">
-  <input id="pac-input" type="text"
-      placeholder="Point A">
-  <input id="pac-output" type="text"
-      placeholder="Point B">
+  <ul id = "address-container">
+    <li id = "address">
+    <input id="pac-input" type="text"
+        placeholder="Point A"></li>
+    <li id = "address"><input id="pac-output" type="text"
+        placeholder="Point B"></li>
+  </ul>
+  <input type="button" value = "Refresh Page" onClick = "window.location.reload()">
   <input id = "submit" type="submit" name="submit" value="submit">
+  <select id = "categories">
+    <option value="bars">Bar</option>
+    <option value="cafe">Cafe</option>
+    <option value="restaurants">Restaurant</option>
+    <option value="fitness">Fitness</option>
+    <option value="movietheaters">Movie Theater</option>
+    <option value="discgolf">Golf</option>
+    <option value="bowling">Bowling</option>
+    <option value="museums">Museums</option>
+    <option value="festivals">Festivals</option>
+  </select>
 </div>
 
 <h3>Set Radius</h3>
@@ -15,9 +33,10 @@
   <p><span id="demo"></span> Meters</p>
 </div>
 
+
 <div id="map"></div>
 <div class="photos">
-  <ul>
+  <ul id="yelp_info">
 
   </ul>
 </div>

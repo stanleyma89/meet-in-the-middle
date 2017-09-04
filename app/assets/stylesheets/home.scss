@@ -15,7 +15,19 @@ html, body {
 img {
   width: 300px;
 }
-#pac-container {
+
+#add {
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  width: 200px;
+}
+#address{
+  display: block;
+}
+
+#pac-container, #add-address {
         padding-bottom: 12px;
         margin-right: 12px;
       }
