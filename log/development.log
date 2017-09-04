@@ -4875,3 +4875,64 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 241ms (Views: 91.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/home" for 127.0.0.1 at 2017-09-04 15:51:34 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 852ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home?lat=43.9107207&lng=-79.13232870000002&radius=1217&term=golf" for 127.0.0.1 at 2017-09-04 15:51:55 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.9107207", "lng"=>"-79.13232870000002", "radius"=>"1217", "term"=>"golf"}
+Completed 200 OK in 296ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-04 15:52:25 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 199ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home?lat=43.6450066&lng=-79.38707175000002&radius=500&term=bars" for 127.0.0.1 at 2017-09-04 15:53:22 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.6450066", "lng"=>"-79.38707175000002", "radius"=>"500", "term"=>"bars"}
+Completed 200 OK in 854ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-04 15:53:43 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 197ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-04 15:53:55 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 189ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-04 16:18:27 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 202ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-04 16:20:49 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 236ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-04 16:21:20 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 142ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+

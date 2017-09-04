@@ -2,6 +2,7 @@ var map;
 var markers = [];
 var slideVal = 500;
 
+
 // Initializes map
 
 function initMap() {
