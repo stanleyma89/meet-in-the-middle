@@ -201,6 +201,8 @@ function autocomplete(autocompleteC) {
       }).always(function(data) {
           console.log(data);
 
+          var businessName = [];
+
           for (var i = 0; i < data.businesses.length; i++) {
           var ul = document.querySelector('#yelp_info');
           var li = document.createElement('li');
@@ -233,28 +235,36 @@ function autocomplete(autocompleteC) {
           var yelpLat = data.businesses[i].coordinates.latitude;
           var yelpLong = data.businesses[i].coordinates.longitude;
 
-          var myLatlng = {lat: yelpLat, lng: yelpLong};
 
-          var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-          });
+          businessName.push(data.businesses[i].name)
 
-          marker.setMap(map);
 
-          // var yelpBusinessName = data.businesses[i].name
-          //
-          // var infowindow = new google.maps.InfoWindow({
-          //   content: yelpBusinessName
-          // });
-          //
-          // google.maps.event.addListener(marker, 'click', function() {
-          //   infowindow.open(map, marker);
-          // })
+          var infowindow = new google.maps.InfoWindow();
+
+          var marker, i;
+
+          for (i = 0; i < businessName.length; i++) {
+
+            var myLatlng = {lat: yelpLat, lng: yelpLong};
+
+            var marker = new google.maps.Marker({
+              position: myLatlng,
+              map: map,
+            });
+
+            marker.setMap(map);
+
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+              return function() {
+                infowindow.setContent(businessName[i]);
+                infowindow.open(map, marker);
+              }
+            })(marker, i));
+          }
+
           // console.log(yelpBusinessName);
 
         }
-
 
     });
 

@@ -966,3 +966,25 @@ Processing by HomeController#index as JSON
 Completed 200 OK in 880ms (Views: 6.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/home" for 127.0.0.1 at 2017-09-05 10:40:07 -0400
+Started GET "/home" for 127.0.0.1 at 2017-09-05 10:40:08 -0400
+  [1m[35m (13.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (15.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (686.2ms)
+  Rendered home/index.html.erb within layouts/application (853.6ms)
+Completed 200 OK in 1132ms (Views: 941.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1162ms (Views: 943.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home?lat=43.64025155&lng=-79.40484800000002&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-05 10:40:21 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.64025155", "lng"=>"-79.40484800000002", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 787ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
