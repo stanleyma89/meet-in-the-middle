@@ -1094,3 +1094,59 @@ Completed 200 OK in 1040ms (Views: 23.1ms | ActiveRecord: 0.0ms)
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/home" for 127.0.0.1 at 2017-09-05 11:53:33 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (312.2ms)
+Completed 500 Internal Server Error in 479ms (ActiveRecord: 6.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__1564698502352892157_46918145126740'
+Started GET "/home" for 127.0.0.1 at 2017-09-05 11:54:27 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (27.5ms)
+Completed 500 Internal Server Error in 181ms (ActiveRecord: 9.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__1564698502352892157_70353242177880'
+Started GET "/home" for 127.0.0.1 at 2017-09-05 11:54:33 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 192ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 11:55:29 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (108.0ms)
+Completed 200 OK in 287ms (Views: 130.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 11:57:23 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (199.8ms)
+Completed 200 OK in 470ms (Views: 261.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home?lat=43.71460089999999&lng=-79.40781549999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-05 11:57:38 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.71460089999999", "lng"=>"-79.40781549999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 402ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
