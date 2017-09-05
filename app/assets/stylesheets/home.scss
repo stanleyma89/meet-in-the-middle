@@ -1,6 +1,39 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html{
+  /*font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  box-sizing: border-box;
+  background: grey;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.header_nav {
+  // margin: 30px;
+  // float: right;
+  width: 100%;
+  background: white;
+  display: inline-block;
+}
+
+.logo {
+  display: inline;
+}
+
+.site-nav {
+  display: inline-block;
+  margin-right: 2%;
+  margin-top: 1%;
+  float: right;
+
+}
+
 #map {
   height: 50%;
   width: 100%;
@@ -12,8 +45,16 @@ html, body {
   padding: 0;
 }
 
+header {
+  width: 100%;
+}
+
 img {
   width: 300px;
+}
+
+.site-nav {
+height: 30px;
 }
 
 #add {
