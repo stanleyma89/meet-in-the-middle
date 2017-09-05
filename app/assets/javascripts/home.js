@@ -202,6 +202,7 @@ function autocomplete(autocompleteC) {
           console.log(data);
 
           var businessName = [];
+          var businessPic = [];
 
           for (var i = 0; i < data.businesses.length; i++) {
           var ul = document.querySelector('#yelp_info');
@@ -236,7 +237,7 @@ function autocomplete(autocompleteC) {
           var yelpLong = data.businesses[i].coordinates.longitude;
 
 
-          businessName.push(data.businesses[i].name)
+          businessName.push(data.businesses[i].name);
 
 
           var infowindow = new google.maps.InfoWindow();
