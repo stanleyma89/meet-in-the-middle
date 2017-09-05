@@ -2,6 +2,7 @@ var map;
 var markers = [];
 var slideVal = 500;
 
+
 // Initializes map
 
 function initMap() {
@@ -199,29 +200,44 @@ function autocomplete(autocompleteC) {
         dataType: 'json'
       }).always(function(data) {
           console.log(data);
+
           var businessName = [];
+          var businessPic = [];
+
           for (var i = 0; i < data.businesses.length; i++) {
           var ul = document.querySelector('#yelp_info');
           var li = document.createElement('li');
           var img = document.createElement('img');
           var pName = document.createElement('p');
           var pAddress = document.createElement('p');
+          var pPhone = document.createElement('p');
+          var pPrice = document.createElement('p');
           var pRating = document.createElement('p');
+          var pType = document.createElement('p');
+          var pUrl = document.createElement('p');
           img.src = data.businesses[i].image_url;
           pName.innerHTML = data.businesses[i].name;
+          pType.innerHTML = data.businesses[i].categories[0]["title"];
           pAddress.innerHTML = data.businesses[i].location.display_address;
+          pPhone.innerHTML = data.businesses[i].display_phone;
+          pUrl.innerHTML = data.businesses[i].url;
+          pPrice.innerHTML = data.businesses[i].price;
           pRating.innerHTML = data.businesses[i].rating;
           li.append(img);
           ul.append(li);
           ul.append(pName);
+          ul.append(pType);
+          ul.append(pPhone);
           ul.append(pAddress);
+          ul.append(pUrl);
+          ul.append(pPrice);
           ul.append(pRating);
 
           var yelpLat = data.businesses[i].coordinates.latitude;
           var yelpLong = data.businesses[i].coordinates.longitude;
 
 
-          businessName.push(data.businesses[i].name)
+          businessName.push(data.businesses[i].name);
 
 
           var infowindow = new google.maps.InfoWindow();
@@ -252,6 +268,19 @@ function autocomplete(autocompleteC) {
         }
 
     });
+
+    var marker = new google.maps.Marker({
+      position: center,
+      map: map,
+    });
+
+    var circle = new google.maps.Circle({
+      map: map,
+      radius: slideVal * 2,    // 10 miles in metres
+      fillColor: '#AA0000'
+    });
+    circle.bindTo('center', marker, 'position');
+
   })
 
 });
@@ -311,12 +340,6 @@ function autocomplete(autocompleteC) {
     //   }
     // }
 
-    // var circle = new google.maps.Circle({
-    //   map: map,
-    //   radius: slideVal,
-    //   fillColor: '#AA0000'
-    // });
-    // circle.bindTo('center', marker, 'position');
 
 
     initialize(center, centerMarker);
@@ -346,6 +369,7 @@ function autocomplete(autocompleteC) {
     // map = new google.maps.Map(document.getElementById('map'), mapOptions);
     // directionsDisplay.setMap(map);
     //function clearMarkers() {
+
 
 
     var i;
