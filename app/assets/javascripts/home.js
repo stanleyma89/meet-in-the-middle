@@ -207,15 +207,27 @@ function autocomplete(autocompleteC) {
           var img = document.createElement('img');
           var pName = document.createElement('p');
           var pAddress = document.createElement('p');
+          var pPhone = document.createElement('p');
+          var pPrice = document.createElement('p');
           var pRating = document.createElement('p');
+          var pType = document.createElement('p');
+          var pUrl = document.createElement('p');
           img.src = data.businesses[i].image_url;
           pName.innerHTML = data.businesses[i].name;
+          pType.innerHTML = data.businesses[i].categories[0]["title"];
           pAddress.innerHTML = data.businesses[i].location.display_address;
+          pPhone.innerHTML = data.businesses[i].display_phone;
+          pUrl.innerHTML = data.businesses[i].url;
+          pPrice.innerHTML = data.businesses[i].price;
           pRating.innerHTML = data.businesses[i].rating;
           li.append(img);
           ul.append(li);
           ul.append(pName);
+          ul.append(pType);
+          ul.append(pPhone);
           ul.append(pAddress);
+          ul.append(pUrl);
+          ul.append(pPrice);
           ul.append(pRating);
 
           var yelpLat = data.businesses[i].coordinates.latitude;
