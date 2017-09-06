@@ -10,18 +10,15 @@
   </head>
 
   <body>
-      <header class="site-header">
-        <h1 class="logo">MeetInTheMiddle</h1>
 
-        <nav class="site-nav">
-          <% if session[:user_id] != nil %>
-            <%= link_to "Logout", :logout%>
-          <% else %>
-            <%= link_to "Register", new_user_path %> |
-            <%= link_to "Login", :login %>
-          <% end %>
-        </nav>
-      </header>
+
+    <% if session[:user_id] != nil %>
+      <%= link_to "Logout", :logout%>
+    <% else %>
+      <%= link_to "Register", new_user_path %> |
+      <%= link_to "Login", :login %>
+    <% end %>
+      
 
       <% flash.each do |key, message| %>
         <div class="flash-<%= key %>"><%= message %></div>
