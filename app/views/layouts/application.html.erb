@@ -11,13 +11,14 @@
 
   <body>
 
-
+  <% if false %>
     <% if session[:user_id] != nil %>
       <%= link_to "Logout", :logout%>
     <% else %>
       <%= link_to "Register", new_user_path %> |
       <%= link_to "Login", :login %>
     <% end %>
+  <% end %>
 
 
       <% flash.each do |key, message| %>
