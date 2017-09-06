@@ -258,7 +258,7 @@ function autocomplete(autocompleteC) {
 
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
               return function() {
-                infowindow.setContent('<p><strong>' + businessName[i] + '</strong></p><br><IMG BORDER="0" ALIGN="Left" WIDTH="150px" SRC="' + businessPic[i] + '">');
+                infowindow.setContent('<p><strong>' + businessName[i] + '</strong></p><br><IMG BORDER="0" ALIGN="Left" CLASS="info-pic" SRC="' + businessPic[i] + '" style="height: 250px !important">');
                 infowindow.open(map, marker);
               }
             })(marker, i));

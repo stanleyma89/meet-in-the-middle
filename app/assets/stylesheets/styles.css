@@ -41,7 +41,7 @@ body {
 }
 
 .bg-light {
-    background-color: #f8f9fa!important
+    /*background-color: #f8f9fa!important*/
 }
 
 a.bg-light:focus,a.bg-light:hover {
@@ -155,12 +155,26 @@ h4 {
 }*/
 
 .fa {
-  padding: 20px;
+   padding: 20px;
    font-size: 30px;
    width: 30px;
    text-align: center;
    text-decoration: none;
    border-radius: 50%;
+}
+
+.section-heading {
+  margin-top: 5%;
+  padding-top: 5%;
+}
+
+.social-media {
+  /*margin-top: -10%;
+  margin-left: 20%;*/
+}
+
+.social-media-icons {
+  
 }
 
 /* Add a hover effect if you want */
