@@ -13,3 +13,20 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+footer > p {
+  text-align: center;
+}
+
+.carousel-caption > h1 {
+  font-size: 80px;
+  font-family: 'Pacifico', cursive;
+}
+
+.navbar-brand {
+  font-family: 'Pacifico', cursive;
+}
+
+.nav.navbar-nav > li {
+  font-family: 'Oswald', sans-serif;
+}

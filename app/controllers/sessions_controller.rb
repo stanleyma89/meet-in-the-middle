@@ -22,6 +22,6 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
 
     flash[:notice] = "You're logged out"
-    redirect_to home_index_url
+    redirect_to front_page_index_path
     end
 end
