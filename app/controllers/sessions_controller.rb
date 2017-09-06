@@ -9,11 +9,11 @@ class SessionsController < ApplicationController
 
       session[:user_id] = user.id
 
-      flash[:notice] = "Successful! You are logged in!"
+      flash[:notice] = "Successful! You are now logged in!"
       redirect_to home_index_url
 
     else
-      flash.now[:alert] = "Try again!"
+      flash.now[:alert] = "Please try again!"
       render :new
     end
   end
