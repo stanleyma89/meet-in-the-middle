@@ -1090,3 +1090,23 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 28ms (Views: 13.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-09-05 20:00:31 -0400
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:6:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-09-05 20:00:52 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanma/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanma/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (5.4ms)
+Completed 200 OK in 17ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-05 20:01:12 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1881ms (Views: 1878.9ms | ActiveRecord: 0.0ms)
+
+
