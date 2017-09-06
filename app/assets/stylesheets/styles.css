@@ -1,0 +1,183 @@
+html {
+  background: lightgrey;
+}
+
+body {
+  font-family: BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+
+}
+
+.background-image {
+  background-image: url('/home/eiji/Desktop/bitmaker/projects/final-project/meet-in-the-middle/app/assets/images/about(patio).jpeg');
+  width: 100%;
+  height: 1000px;
+  margin: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.center-text {
+  margin-top: 295px;
+  position: absolute;
+
+}
+
+.meet-text {
+  font-family: Arial;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.meet-text-blurb {
+  margin: auto;
+  width: 75%;
+  font-family: Arial;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+.bg-light {
+    background-color: #f8f9fa!important
+}
+
+a.bg-light:focus,a.bg-light:hover {
+    background-color: #dae0e5!important
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%
+}
+
+.team-member {
+  height: 100%;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width:540px
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width:720px
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width:960px
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width:1140px
+    }
+}
+
+h4 {
+  text-align: center;
+}
+
+.text-muted {
+  text-align: center;
+}
+
+.container-fluid {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px
+}
+
+.col-lg-12 {
+    text-align: center;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%
+}
+
+.col-sm-4 {
+    max-width: 25%
+}
+
+/*img {
+    vertical-align: middle;
+    border-style: none
+}*/
+
+.text-muted {
+    color: #868e96!important
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+.list-inline-item {
+    display: inline-block
+}
+
+.list-inline-item:not(:last-child) {
+    margin-right: 5px
+}
+
+.circle-img {
+  margin-top: 20%;
+  margin-left: 10%;
+  width: 80%;
+  border-radius: 50%;
+}
+
+/*.social-media {
+}*/
+
+.fa {
+  padding: 20px;
+   font-size: 30px;
+   width: 30px;
+   text-align: center;
+   text-decoration: none;
+   border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-linkedin {
+    /*background-color: 'blue';*/
+    color: blue;
+}
+
+/* Twitter */
+.fa-github {
+    /*background-color: ;*/
+    color: black;
+}
