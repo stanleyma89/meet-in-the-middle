@@ -1,21 +1,31 @@
 <%= stylesheet_link_tag    'home', media: 'all' %>
 <%= javascript_include_tag 'home' %>
 
+
 <% if current_user %>
 
-  <div id = "add-address">
-    <button id = "add" type="button" name="add">Add Address</button>
-  </div>
+<section class="row">
+  <div class="col-lg-12">
+    <div class="col-lg-6">
+
   <div id="pac-container">
     <ul id = "address-container">
       <li id = "address">
       <input id="pac-input" type="text"
-          value="<%=  %>"></li>
+          placeholder="Point A"></li>
       <li id = "address"><input id="pac-output" type="text"
           placeholder="Point B"></li>
     </ul>
-    <input type="button" value = "Refresh Page" onClick = "window.location.reload()">
-    <select id = "categories">
+    <div id = "add-address">
+      <button class="btn-sm btn-default" type="button" name="add">Add Address</button>
+    </div>
+    <input class="btn-default" type="button" value = "Refresh Page" onClick = "window.location.reload()">
+  </div>
+</div>
+
+  <div class="col-lg-6">
+
+    <select class="col-lg-4 form-control">
       <option value="restaurants">Restaurant</option>
       <option value="bars">Bar</option>
       <option value="cafe">Cafe</option>
@@ -26,16 +36,18 @@
       <option value="museums">Museums</option>
       <option value="festivals">Festivals</option>
     </select>
-  </div>
 
   <h3>Set Radius</h3>
 
-  <div id="slidecontainer">
+  <div class="">
     <input type="range" min="500" max="2000" value="50" class="slider" id="myRange">
     <p><span id="demo"></span> Meters</p>
   </div>
 
-  <input id = "submit" type="submit" name="submit" value="submit">
+  <input class="btn-primary" type="submit" name="submit" value="submit">
+</div>
+</div>
+</section>
 
   <div id="map"></div>
   <div class="photos">
@@ -71,14 +83,6 @@
     </select>
   </div>
 
-  <h3 style="display:none">Set Radius</h3>
-
-  <div id="slidecontainer" style="display:none">
-    <input type="range" min="500" max="2000" value="50" class="slider" id="myRange">
-    <p><span id="demo"></span> Meters</p>
-  </div>
-
-  <input id = "submit" type="submit" name="submit" value="submit">
 
   <div id="map"></div>
   <div class="photos">
