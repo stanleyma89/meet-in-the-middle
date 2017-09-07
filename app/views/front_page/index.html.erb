@@ -87,38 +87,71 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <h2 class="featurette-heading" id="team-heading">Our Amazing Team</h2>
-        <div class="col-lg-4">
-          <%= image_tag "albert_crop.png" , class:"img-circle"%>
-          <h2>Albert Burchi</h2>
+        <div class="col-sm-3">
+          <div class="team-member">
+            <%= image_tag "albert_crop.png" , class:"img-circle"%>
+            <h2 class="name">Albert Burchi</h2>
             <div class="social-media">
-              <a href="https://www.linkedin.com/in/albert-burchi-47607796/" class="fa fa-linkedin"></a>
-              <a href="https://github.com/AdditionalTesting" class="fa fa-github"></a>
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/albert-burchi-47607796/" class="fa fa-linkedin"></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://github.com/AdditionalTesting" class="fa fa-github"></a>
+                </li>
+              </ul>
             </div>
           </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <%= image_tag "eiji_2.jpeg" , class:"img-circle"%>
-          <h2>Eiji Mine</h2>
-          <div class="social-media">
-            <a href="https://www.linkedin.com/in/eiji-mine-3271ba13/" class="fa fa-linkedin"></a>
-            <a href="https://github.com/eijimine" class="fa fa-github"></a>
-          </div>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <%= image_tag "gina_crop.png" , class:"img-circle"%>
-          <h2>Gina Son</h2>
-          <div class="social-media">
-            <a href="https://www.linkedin.com/in/gina-son-7268b8ba/" class="fa fa-linkedin"></a>
-            <a href="https://github.com/ginason" class="fa fa-github"></a>
-          </div>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4 col-lg-offset-2">
-          <%= image_tag "stan_crop.png" , class:"img-circle"%>
-          <h2>Stanley Ma</h2>
-          <div class="social-media">
-            <a href="https://www.linkedin.com/in/stanleyma89/" class="fa fa-linkedin"></a>
-            <a href="https://github.com/stanleyma89" class="fa fa-github"></a>
-          </div>
-        </div><!-- /.col-lg-4 -->
+        </div>
+        <div class="col-sm-3">
+          <div class="team-member">
+            <%= image_tag "eiji_2.jpeg" , class:"img-circle"%>
+            <h2 class="name">Eiji Mine</h2>
+            <div class="social-media">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/eiji-mine-3271ba13/" class="fa fa-linkedin"></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://github.com/eijimine" class="fa fa-github"></a>
+                </li>
+              </ul>
+            </div>
+          </div><!-- /.col-lg-4 -->
+        </div>
+        <div class="col-sm-3">
+          <div class="team-member">
+            <%= image_tag "gina_crop.png" , class:"img-circle"%>
+            <h2 class="name">Gina Son</h2>
+            <div class="social-media">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/gina-son-7268b8ba/" class="fa fa-linkedin"></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://github.com/ginason" class="fa fa-github"></a>
+                </li>
+              </ul>
+            </div>
+          </div><!-- /.col-lg-4 -->
+        </div>
+        <div class="col-sm-3">
+          <div class="team-member">
+            <%= image_tag "stan_crop.png" , class:"img-circle"%>
+            <h2 class="name">Stanley Ma</h2>
+            <div class="social-media">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/stanleyma89/" class="fa fa-linkedin"></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://github.com/stanleyma89" class="fa fa-github"></a>
+                </li>
+              </ul>
+            </div>
+          </div><!-- /.col-lg-4 -->
+        </div>
+        <% if false %>
         <div class="col-lg-4">
           <%= image_tag "stein.jpg" , class:"img-circle"%>
           <h2>Stein Tan</h2>
@@ -127,6 +160,7 @@
             <a href="https://github.com/stein328i" class="fa fa-github"></a>
           </div>
         </div><!-- /.col-lg-4 -->
+        <% end %>
       </div><!-- /.row -->
 
       <hr class="featurette-divider">

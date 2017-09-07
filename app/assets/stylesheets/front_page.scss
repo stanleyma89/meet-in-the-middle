@@ -108,6 +108,7 @@ html, body {
   width: 200px;
   height: 200px;
   border: 7px solid #f1f1f1;
+  margin-left: 30px;
 }
 
 .fa {
@@ -140,4 +141,12 @@ html, body {
   text-align: center;
   margin-top: 0px;
   margin-bottom: 50px;
+}
+
+.list-inline {
+  text-align: center;
+}
+
+.name {
+  text-align: center;
 }
