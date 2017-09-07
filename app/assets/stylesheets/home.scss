@@ -49,6 +49,81 @@ h5 {
 }
 
 
+
+.star-ratings-sprite {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  font-size: 0;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 110px;
+  margin: 0 auto;
+
+  &-rating {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+    background-position: 0 100%;
+    float: left;
+    height: 21px;
+    display:block;
+  }
+
+}
+
+.border {
+width: 300px;
+// height: 300px;
+}
+
+.yelplistdiv:hover{
+box-shadow: 0 0 0 10px #FDEBD0;
+transition: .5s ease;
+}
+
+/* unvisited link */
+a:link {
+    color: black;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: black;
+}
+
+/* selected link */
+a:active {
+    color: black;
+}
+
+
+#yelp_info{
+  margin: 5px auto;
+  text-align: center;
+  margin: 50px 80px;
+}
+.yelplistdiv{
+  margin-bottom: 5px;
+  transition: .5s ease;
+  box-shadow: 1px 1px 5px 0 rgba(109, 109, 109, .3);
+  width: 300px;
+  // height: 300px;
+  display: inline-block;
+  margin: 35px 5px;
+  // overflow: hidden;
+  // float: left;
+}
+p{
+  margin: 2px auto;
+}
+
+
+
+
 #map {
   height: 100%;
 }
