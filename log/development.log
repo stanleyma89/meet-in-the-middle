@@ -19166,3 +19166,108 @@ Processing by HomeController#index as JSON
 Completed 200 OK in 370ms (Views: 1.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/home" for 127.0.0.1 at 2017-09-07 13:48:38 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (171.1ms)
+Completed 200 OK in 590ms (Views: 243.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-09-07 13:48:45 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/front_page
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 13:48:45 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 13:48:45 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 68ms (Views: 67.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 13:48:48 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 222ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 13:48:52 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 66ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 13:49:33 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (2.9ms)
+  Rendered sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 66ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 13:49:33 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.4ms)
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 13:49:39 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 212ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 13:49:39 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 223ms (Views: 80.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 13:50:15 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.4ms)
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 13:50:15 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.2ms)
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-09-07 13:50:22 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qvFGbD5l3a7ZtWq+qVHgqtXPHFwrXCHOtNQmP95o1dSWSuk6thmxci0w8MAHM4ZXtv0BnKVQVDvyOlQBxuZOMw==", "email"=>"e@e.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "e@e.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 75ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 13:50:22 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 223ms (Views: 58.8ms | ActiveRecord: 0.4ms)
+
+
