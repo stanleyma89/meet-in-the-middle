@@ -8,43 +8,73 @@
   </ul>
 <% end %>
 
+<!-- <form>
+
+  <div class="group">
+    <input type="text" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label>Name</label>
+  </div>
+
+    <div class="group">
+      <input type="text" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Email</label>
+    </div>
+
+</form> -->
+
+
 <%= form_for @user do |f| %>
 
-  <div class='field'>
+  <div class="group">
+    <%=f.text_field :first_name, required: true %>
+    <span class="highlight"></span>
+    <span class="bar"></span>
     <%=f.label :first_name %>
-    <%=f.text_field :first_name %>
   </div>
+  <!-- <label>First Name</label> -->
+  <!-- <input type="text" required> -->
 
-  <div class='field'>
+  <div class="group">
+    <%=f.text_field :last_name, required: true %>
+    <span class="highlight"></span>
+    <span class="bar"></span>
     <%=f.label :last_name %>
-    <%=f.text_field :last_name %>
   </div>
 
-  <div class='field'>
-    <%=f.label :address %>
-    <%=f.text_field :address %>
-  </div>
-
-  <div class='field'>
-    <%=f.label :phone %>
-    <%=f.telephone_field :phone %>
-  </div>
-
-  <div class='field'>
+  <div class="group">
+    <%=f.text_field :email, required: true %>
+    <span class="highlight"></span>
+    <span class="bar"></span>
     <%=f.label :email %>
-    <%=f.email_field :email %>
   </div>
 
-  <div class='field'>
-    <%=f.label :password %>
-    <%=f.password_field :password%>
+  <div class="group">
+    <%=f.password_field :password, required: true %>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <%=f.label :password_field %>
   </div>
 
-  <div class='field'>
+  <div class="group">
+    <%=f.password_field :password_confirmation, required: true %>
+    <span class="highlight"></span>
+    <span class="bar"></span>
     <%=f.label :password_confirmation %>
-    <%=f.password_field :password_confirmation %>
   </div>
 
   <%= f.submit 'Sign up!' %>
 
+  <!-- <div class='group'>
+  <%=f.label :address %>
+  <%=f.text_field :address %>
+</div>
+
+<div class='group'>
+<%=f.label :phone %>
+<%=f.telephone_field :phone %>
+</div> -->
 <% end %>
