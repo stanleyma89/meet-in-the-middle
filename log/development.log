@@ -22797,3 +22797,162 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 181ms (Views: 38.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/home" for 127.0.0.1 at 2017-09-07 16:36:35 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (187.6ms)
+Completed 200 OK in 464ms (Views: 281.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 16:40:00 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 287ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 16:43:29 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 481ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 16:52:50 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 259ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 16:53:43 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 274ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 16:55:51 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (73.9ms)
+Completed 200 OK in 272ms (Views: 105.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 17:33:53 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 51ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 17:33:53 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:34:19 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 221ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:34:19 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 269ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home?lat=43.64025155&lng=-79.40484800000002&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-07 17:34:32 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.64025155", "lng"=>"-79.40484800000002", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 777ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 17:34:45 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.8ms)
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 17:34:45 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.3ms)
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-09-07 17:34:52 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cKwDjiUcANPUuuyq1/Sp7p4Hi6CVoN9+9XkVGq4Gd3pMF6zYrWBsDyA/dtR5ls8T/TWWYBusqouzl2cktojsnQ==", "email"=>"e@e.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "e@e.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 91ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:34:52 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 220ms (Views: 64.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home?lat=43.74457790000001&lng=-79.32259644999999&radius=1067&term=cafe" for 127.0.0.1 at 2017-09-07 17:35:35 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.74457790000001", "lng"=>"-79.32259644999999", "radius"=>"1067", "term"=>"cafe"}
+Completed 200 OK in 454ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:36:25 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 311ms (Views: 57.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:39:24 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 379ms (Views: 62.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:39:57 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 229ms (Views: 64.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home?lat=43.9107207&lng=-79.13232870000002&radius=1500&term=golf" for 127.0.0.1 at 2017-09-07 17:40:15 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.9107207", "lng"=>"-79.13232870000002", "radius"=>"1500", "term"=>"golf"}
+Completed 200 OK in 652ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:40:25 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 287ms (Views: 64.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home?lat=43.75686895&lng=-79.21975435000002&radius=1500&term=golf" for 127.0.0.1 at 2017-09-07 17:41:56 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.75686895", "lng"=>"-79.21975435000002", "radius"=>"1500", "term"=>"golf"}
+Completed 200 OK in 413ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
