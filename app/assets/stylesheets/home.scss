@@ -58,7 +58,12 @@ h5 {
   width: 100%;
 }
 
+#reset-btn {
+  background-color: #E6B0AA;
+}
+
 .btn-mrg {
+  color: #1F618D;
   margin-top: 10px;
 }
 
@@ -74,7 +79,7 @@ h5 {
 }
 
 .menu-inner-box {
-  opacity: 0.85;
+  opacity: 0.9;
   margin-top: 50px;
 }
 
@@ -88,6 +93,10 @@ h5 {
 
 .submitbutton {
   margin-top: 50px;
+}
+
+#submit {
+  border-radius: 24px;
 }
 
 /* Optional: Makes the sample page fill the window. */
