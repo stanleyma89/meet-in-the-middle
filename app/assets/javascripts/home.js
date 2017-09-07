@@ -44,6 +44,7 @@ function initMap() {
     addressList.id = "address"
     addressInput.type = "text";
     addressInput.id = "pac-input";
+    addressInput.className = "input-lg";
     addressInput.placeholder = "Add Address";
     addressList.append(addressInput);
     addressContainer.append(addressList);
