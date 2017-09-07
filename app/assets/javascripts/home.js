@@ -57,7 +57,7 @@ function autocomplete(autocompleteC) {
 
 
     var placeC = autocompleteC.getPlace();
-
+    console.log(placeC);
     lonLatC.push(placeC.geometry.location.lat());
     lonLatC.push(placeC.geometry.location.lng());
 
@@ -125,7 +125,7 @@ function autocomplete(autocompleteC) {
 
 
     var placeA = autocompleteA.getPlace();
-
+    console.log(placeA);
     lonLatA.push(placeA.geometry.location.lat());
     lonLatA.push(placeA.geometry.location.lng());
 
@@ -144,7 +144,7 @@ function autocomplete(autocompleteC) {
       map.setZoom(15);
     }
 
-    console.log(locations);
+    // console.log(locations);
 
   })
 
@@ -203,35 +203,58 @@ function autocomplete(autocompleteC) {
 
           var businessName = [];
           var businessPic = [];
+          var businessId = [];
 
           for (var i = 0; i < data.businesses.length; i++) {
-          var ul = document.querySelector('#yelp_info');
-          var li = document.createElement('li');
+          var divYelpInfo = document.querySelector('#yelp_info');
+          var divYelpList = document.createElement('div');
+          // var li = document.createElement('li');
+          var starContainer = document.createElement('div');
+          starContainer.className = 'star-ratings-sprite';
+          var stars = document.createElement('span');
+          stars.className = 'star-ratings-sprite-rating';
+
           var img = document.createElement('img');
-          var pName = document.createElement('p');
+          img.className = "border";
+          var pName = document.createElement('h4');
           var pAddress = document.createElement('p');
           var pPhone = document.createElement('p');
           var pPrice = document.createElement('p');
           var pRating = document.createElement('p');
           var pType = document.createElement('p');
-          var pUrl = document.createElement('p');
-          img.src = data.businesses[i].image_url;
-          pName.innerHTML = data.businesses[i].name;
+          var pUrl = document.createElement('a');
+          divYelpList.className = "yelplistdiv"
+          pUrl.href = data.businesses[i].url;
+          pUrl.target = "_blank";
+          // pUrl.innerText = "link to website";
+          img.width = "300";
+          img.height = "300";
+          if (data.businesses[i].image_url) {
+            img.src = data.businesses[i].image_url;
+          } else {
+            img.src = "http://skolarships.com/admin/scholarship_images/no-img.jpg"
+          }
+          pName.innerHTML = data.businesses[i].name.bold();
+          //////
+          pName.id = data.businesses[i].id;
+          /////
           pType.innerHTML = data.businesses[i].categories[0]["title"];
-          pAddress.innerHTML = data.businesses[i].location.display_address;
-          pPhone.innerHTML = data.businesses[i].display_phone;
-          pUrl.innerHTML = data.businesses[i].url;
+          pAddress.innerHTML = "➤ "+data.businesses[i].location.display_address;
+          pPhone.innerHTML = "☎ "+data.businesses[i].display_phone.substr(2);
+          // pUrl.innerHTML = data.businesses[i].url;
           pPrice.innerHTML = data.businesses[i].price;
           pRating.innerHTML = data.businesses[i].rating;
-          li.append(img);
-          ul.append(li);
-          ul.append(pName);
-          ul.append(pType);
-          ul.append(pPhone);
-          ul.append(pAddress);
-          ul.append(pUrl);
-          ul.append(pPrice);
-          ul.append(pRating);
+          pRating.innerText = (pRating.innerText / 5.0) * 100;
+          stars.style.width = pRating.innerText + "%";
+          starContainer.append(stars);
+          divYelpList.append(img);
+          divYelpList.append(pName);
+          divYelpList.append(pType);
+          divYelpList.append(pPhone);
+          divYelpList.append(pAddress);
+          divYelpList.append(starContainer);
+          pUrl.append(divYelpList);
+          divYelpInfo.append(pUrl);
 
           var yelpLat = data.businesses[i].coordinates.latitude;
           var yelpLong = data.businesses[i].coordinates.longitude;
@@ -239,7 +262,7 @@ function autocomplete(autocompleteC) {
 
           businessName.push(data.businesses[i].name);
           businessPic.push(data.businesses[i].image_url);
-
+          businessId.push(data.businesses[i].id);
 
           var infowindow = new google.maps.InfoWindow();
 
@@ -258,13 +281,32 @@ function autocomplete(autocompleteC) {
 
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
               return function() {
-                infowindow.setContent('<p><strong>' + businessName[i] + '</strong></p><br><IMG BORDER="0" ALIGN="Left" WIDTH="150px" SRC="' + businessPic[i] + '">');
+                var div = document.createElement('div');
+                var name = document.createElement('p');
+                var img = document.createElement('img');
+
+                if (businessPic[i]) {
+                  img.src = businessPic[i];
+                } else {
+                  img.src = "http://skolarships.com/admin/scholarship_images/no-img.jpg";
+                }
+                
+                img.align = "left";
+                img.style.width = "150px";
+                img.style.height = "150px";
+                img.border = "2px";
+                name.innerHTML = businessName[i].bold();
+                // div.href = '#' + businessId[i];
+                div.appendChild(name);
+                div.append(img);
+                infowindow.setContent(div.innerHTML);
                 infowindow.open(map, marker);
+                console.log(img, name, a );
               }
             })(marker, i));
           }
 
-          // console.log(yelpBusinessName);
+
 
         }
 

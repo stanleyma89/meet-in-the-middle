@@ -1642,3 +1642,2863 @@ Processing by HomeController#index as JSON
 Completed 200 OK in 391ms (Views: 2.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/home" for 127.0.0.1 at 2017-09-05 19:44:16 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (774.4ms)
+Completed 200 OK in 2403ms (Views: 1162.9ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=732&term=restaurants" for 127.0.0.1 at 2017-09-05 19:44:34 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"732", "term"=>"restaurants"}
+Completed 200 OK in 627ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 19:45:11 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 281ms (Views: 102.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 19:52:08 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (97.7ms)
+Completed 200 OK in 1341ms (Views: 167.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-09-05 19:52:38 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/home
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 19:52:38 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 177ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 19:52:39 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 146ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-05 19:52:40 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.7ms)
+  Rendered sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 35ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-05 19:52:40 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (0.7ms)
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-09-05 19:52:45 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yksHFwpsXaX2NO3eXmmZ0tYBaP0p9V7qghaqLF/3Ha3YieCP0pF+whXYV6KzUHlSi1aeCLr43EY0X+QnODuF8g==", "email"=>"ginasunah33@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ginasunah33@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 64ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 19:52:45 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 146ms (Views: 24.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 19:53:13 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 191ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 19:55:10 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 589ms (Views: 409.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home?lat=43.751773850000006&lng=-79.36205330000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-05 19:55:35 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.751773850000006", "lng"=>"-79.36205330000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 520ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 19:56:40 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 600ms (Views: 427.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.20177875000002&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-05 19:56:56 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.20177875000002", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 682ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 19:57:42 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 260ms (Views: 98.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-05 19:57:50 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 590ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 19:58:00 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 160ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 19:58:50 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 234ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 19:59:07 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 182ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.73829740000001&lng=-79.42510855&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-05 20:00:38 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.73829740000001", "lng"=>"-79.42510855", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 1368ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 20:00:59 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 182ms (Views: 47.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 20:03:38 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 384ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 20:56:45 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (655.8ms)
+Completed 200 OK in 876ms (Views: 692.4ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 20:59:58 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (54.1ms)
+Completed 200 OK in 255ms (Views: 102.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 21:00:17 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 290ms (Views: 38.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-05 21:00:28 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 515ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 21:02:25 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 278ms (Views: 89.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-05 21:02:33 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 480ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 21:07:30 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (50.7ms)
+Completed 200 OK in 1319ms (Views: 140.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home?lat=43.751773850000006&lng=-79.36205330000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-05 21:07:40 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.751773850000006", "lng"=>"-79.36205330000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 404ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 21:09:45 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 255ms (Views: 103.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-05 21:09:52 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 813ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-05 21:50:04 -0400
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+SocketError (Failed to open TCP connection to api.yelp.com:443 (getaddrinfo: nodename nor servname provided, or not known)):
+  
+app/controllers/home_controller.rb:7:in `index'
+Started GET "/" for 127.0.0.1 at 2017-09-06 10:33:19 -0400
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (3.6ms)
+Completed 200 OK in 19ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 10:33:22 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (740.8ms)
+Completed 200 OK in 1066ms (Views: 797.4ms | ActiveRecord: 32.5ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 10:33:35 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 703ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 10:36:55 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 259ms (Views: 86.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 10:37:04 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 525ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 10:45:04 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 198ms (Views: 22.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 10:45:13 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 568ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 10:47:37 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 228ms (Views: 22.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 10:47:47 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 513ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 10:52:39 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 466ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 10:55:34 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 346ms (Views: 75.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 10:55:51 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 515ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 10:56:18 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 293ms (Views: 28.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 10:56:28 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 496ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:01:43 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 1435ms (Views: 80.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.74933295&lng=-79.36203725000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 11:01:59 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.74933295", "lng"=>"-79.36203725000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 499ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:06:53 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 233ms (Views: 78.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:06:58 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 196ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.751773850000006&lng=-79.36205330000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 11:07:07 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.751773850000006", "lng"=>"-79.36205330000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 341ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:11:41 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 222ms (Views: 91.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.751773850000006&lng=-79.36205330000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 11:11:52 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.751773850000006", "lng"=>"-79.36205330000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 514ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:13:01 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 395ms (Views: 83.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 11:13:07 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 516ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:15:57 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 264ms (Views: 85.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 11:16:07 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 393ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:17:02 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (48.5ms)
+Completed 200 OK in 261ms (Views: 84.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:17:10 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 159ms (Views: 22.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:17:16 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 248ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 11:17:25 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 373ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:18:15 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 287ms (Views: 75.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.76253885&lng=-79.31361605000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 11:18:26 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.76253885", "lng"=>"-79.31361605000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 634ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:19:21 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 293ms (Views: 83.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.76253885&lng=-79.31361605000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 11:19:48 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.76253885", "lng"=>"-79.31361605000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 441ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:21:22 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 162ms (Views: 30.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 11:21:29 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 801ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:21:59 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 183ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:22:39 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 309ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.751773850000006&lng=-79.36205330000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 11:22:47 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.751773850000006", "lng"=>"-79.36205330000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 659ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:24:08 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 199ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:25:07 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 197ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 11:25:23 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 1593ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:31:04 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (51.3ms)
+Completed 200 OK in 253ms (Views: 87.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.76253885&lng=-79.31361605000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 11:31:11 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.76253885", "lng"=>"-79.31361605000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 784ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:37:50 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 252ms (Views: 35.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:38:02 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 162ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.73829740000001&lng=-79.26678575&radius=500&term=museums" for 127.0.0.1 at 2017-09-06 11:39:45 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.73829740000001", "lng"=>"-79.26678575", "radius"=>"500", "term"=>"museums"}
+Completed 200 OK in 1439ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:40:37 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 198ms (Views: 41.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.73829740000001&lng=-79.26678575&radius=892&term=cafe" for 127.0.0.1 at 2017-09-06 11:41:13 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.73829740000001", "lng"=>"-79.26678575", "radius"=>"892", "term"=>"cafe"}
+Completed 200 OK in 570ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:49:44 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 256ms (Views: 51.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 11:50:03 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 586ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:55:12 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 319ms (Views: 93.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:55:13 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 163ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 11:55:24 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 197ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 11:55:34 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 513ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 12:00:26 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (66.8ms)
+Completed 200 OK in 334ms (Views: 160.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 12:00:34 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 526ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 12:01:24 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (65.6ms)
+Completed 200 OK in 276ms (Views: 105.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.76253885&lng=-79.31361605000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 12:01:33 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.76253885", "lng"=>"-79.31361605000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 1510ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 12:03:08 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 296ms (Views: 102.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 12:03:19 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 475ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 12:08:46 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (43.6ms)
+Completed 200 OK in 1266ms (Views: 86.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 12:08:55 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 703ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 12:12:59 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (52.8ms)
+Completed 200 OK in 1270ms (Views: 92.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 12:13:01 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 153ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 12:13:39 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 424ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-06 12:24:55 -0400
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (4.4ms)
+Completed 200 OK in 26ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 12:24:59 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (282.6ms)
+Completed 200 OK in 588ms (Views: 343.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-06 12:25:19 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (3.1ms)
+  Rendered sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-06 12:25:19 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.8ms)
+  Rendered sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-09-06 12:25:31 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x+wtEz4s047PpiRUA6ub2WnH6CmpP2V0X6hDU7qlal+7GVUv1O3A1QNoq/+TJgkQqzZGu2nV0RQJmcFzhzILkA==", "email"=>"ginasunah33@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ginasunah33@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 109ms (ActiveRecord: 20.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 12:25:31 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 189ms (Views: 23.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 12:25:40 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 397ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 12:26:36 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (53.1ms)
+Completed 200 OK in 270ms (Views: 86.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 12:26:46 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 396ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 14:22:13 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 256ms (Views: 78.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 14:43:31 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 264ms (Views: 45.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 14:43:47 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 188ms (Views: 51.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 14:45:10 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (62.1ms)
+Completed 200 OK in 1312ms (Views: 99.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 14:50:55 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (91.1ms)
+Completed 200 OK in 338ms (Views: 132.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 14:52:21 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 1214ms (Views: 35.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 14:54:07 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 325ms (Views: 90.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 14:56:14 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 1274ms (Views: 84.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 14:56:16 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 168ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 14:56:28 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 486ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 14:56:57 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 309ms (Views: 103.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 14:57:12 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 217ms (Views: 25.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/home?lat=43.751773850000006&lng=-79.36205330000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 14:57:21 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.751773850000006", "lng"=>"-79.36205330000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 419ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:05:46 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 319ms (Views: 80.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:05:54 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 405ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:06:46 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 1283ms (Views: 100.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home?lat=43.751773850000006&lng=-79.36205330000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:06:56 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.751773850000006", "lng"=>"-79.36205330000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 341ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:08:05 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 258ms (Views: 88.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:08:14 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 432ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:10:40 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 258ms (Views: 81.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:10:47 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 408ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:12:27 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 320ms (Views: 87.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.6582125&lng=-79.33865055000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:12:38 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.6582125", "lng"=>"-79.33865055000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 636ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:14:07 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 205ms (Views: 43.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:14:14 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 531ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:22:56 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (70.7ms)
+Completed 200 OK in 1288ms (Views: 166.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:23:18 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 1034ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:23:28 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 217ms (Views: 46.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:23:38 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 387ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:32:03 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (67.8ms)
+Completed 200 OK in 1346ms (Views: 153.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:34:25 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (63.3ms)
+Completed 200 OK in 301ms (Views: 101.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:36:40 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 1210ms (Views: 30.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.76253885&lng=-79.31361605000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:38:58 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.76253885", "lng"=>"-79.31361605000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 937ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:45:22 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (71.5ms)
+Completed 200 OK in 330ms (Views: 129.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:45:29 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (64.6ms)
+Completed 200 OK in 236ms (Views: 98.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:46:15 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (44.9ms)
+Completed 200 OK in 245ms (Views: 74.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:49:58 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 253ms (Views: 39.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:50:59 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 1318ms (Views: 82.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:51:20 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 173ms (Views: 30.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:51:30 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 480ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:52:02 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 266ms (Views: 95.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:52:11 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 479ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:52:44 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 306ms (Views: 91.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:52:53 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 435ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:53:13 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 1267ms (Views: 102.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:53:20 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 500ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:54:11 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 243ms (Views: 86.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:54:17 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 684ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:55:49 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 295ms (Views: 93.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:55:56 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 541ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home?lat=43.76253885&lng=-79.31361605000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:56:58 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.76253885", "lng"=>"-79.31361605000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 532ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 15:57:48 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 235ms (Views: 94.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.76253885&lng=-79.31361605000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 15:57:57 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.76253885", "lng"=>"-79.31361605000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 524ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:06:50 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (50.5ms)
+Completed 200 OK in 357ms (Views: 91.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:07:41 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (63.4ms)
+Completed 200 OK in 274ms (Views: 105.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:07:52 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 212ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:16:04 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 1270ms (Views: 83.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:16:11 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 159ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:16:17 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 877ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:17:01 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 255ms (Views: 89.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:17:11 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 1417ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:18:32 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 382ms (Views: 51.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:18:47 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 267ms (Views: 35.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:19:46 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 1371ms (Views: 98.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:20:04 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 501ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:20:24 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 227ms (Views: 73.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:20:31 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 516ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:21:11 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 211ms (Views: 76.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:21:18 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 388ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:22:49 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 230ms (Views: 92.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:23:00 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 422ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:24:06 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (48.2ms)
+Completed 200 OK in 227ms (Views: 74.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:24:42 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 192ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:26:34 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (58.5ms)
+Completed 200 OK in 1276ms (Views: 96.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:26:43 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 462ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:27:06 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (58.7ms)
+Completed 200 OK in 247ms (Views: 88.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:27:16 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 596ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:27:35 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 251ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:28:28 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 224ms (Views: 70.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:28:35 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 340ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:28:52 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 261ms (Views: 82.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:28:58 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 509ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:30:46 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 221ms (Views: 21.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=bars" for 127.0.0.1 at 2017-09-06 16:30:58 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"bars"}
+Completed 200 OK in 368ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:31:37 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 251ms (Views: 73.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:31:46 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 591ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:35:59 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 429ms (Views: 91.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:36:07 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (55.1ms)
+Completed 200 OK in 250ms (Views: 83.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:36:15 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 354ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:36:51 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 237ms (Views: 73.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:36:57 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 365ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:38:35 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (51.9ms)
+Completed 200 OK in 322ms (Views: 132.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:38:41 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 529ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:39:51 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (43.8ms)
+Completed 200 OK in 222ms (Views: 70.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:40:01 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 717ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:41:36 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (48.7ms)
+Completed 200 OK in 1444ms (Views: 79.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:41:45 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 474ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:43:34 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (54.7ms)
+Completed 200 OK in 293ms (Views: 109.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:43:44 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 376ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:44:03 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (77.4ms)
+Completed 200 OK in 251ms (Views: 117.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:44:10 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 488ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:46:05 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 268ms (Views: 89.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:46:11 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 510ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:46:24 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 241ms (Views: 87.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:46:32 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 599ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:47:05 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 231ms (Views: 75.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:47:12 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 540ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:47:29 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (57.5ms)
+Completed 200 OK in 255ms (Views: 85.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:47:35 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 450ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:50:23 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 316ms (Views: 153.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:50:29 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 432ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:51:19 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 568ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:53:27 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 408ms (Views: 86.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.76253885&lng=-79.31361605000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:53:34 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.76253885", "lng"=>"-79.31361605000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 746ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:55:59 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 340ms (Views: 87.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:56:06 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 738ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 16:56:46 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 413ms (Views: 140.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 16:56:54 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 482ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 17:11:12 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 342ms (Views: 97.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=4.891217149999999&lng=-144.0882418&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 17:11:24 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"4.891217149999999", "lng"=>"-144.0882418", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 216ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 17:11:27 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 178ms (Views: 35.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 17:11:37 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 458ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 17:13:35 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 1231ms (Views: 36.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 17:13:37 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 180ms (Views: 29.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 17:13:58 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 376ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 17:32:42 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (50.4ms)
+Completed 200 OK in 304ms (Views: 84.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 17:32:55 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 172ms (Views: 39.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 17:33:16 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 620ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 17:35:36 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (49.5ms)
+Completed 200 OK in 222ms (Views: 82.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 17:35:46 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 518ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 17:42:46 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 236ms (Views: 94.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 17:42:53 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 567ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 17:42:59 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 482ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 17:43:31 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 499ms (Views: 133.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 17:43:39 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 329ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 17:44:31 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 238ms (Views: 106.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 17:44:38 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 600ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=bars" for 127.0.0.1 at 2017-09-06 17:44:58 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"bars"}
+Completed 200 OK in 388ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 17:46:27 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (57.2ms)
+Completed 200 OK in 267ms (Views: 99.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 17:46:33 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 479ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 17:48:28 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 268ms (Views: 88.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 17:48:35 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 389ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 17:49:39 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 245ms (Views: 82.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 17:49:46 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 591ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 17:50:52 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 465ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 18:05:44 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (46.1ms)
+Completed 200 OK in 1459ms (Views: 174.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 18:05:54 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 572ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 18:29:35 -0400
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (342.1ms)
+Completed 200 OK in 625ms (Views: 389.2ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-09-06 18:29:39 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 18:29:39 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 163ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 18:29:39 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 170ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 18:29:48 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 649ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 18:30:26 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 173ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 18:36:15 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 1910ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 18:38:14 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 338ms (Views: 154.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 18:38:28 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 727ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 18:41:05 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 199ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-06 18:41:07 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (3.6ms)
+  Rendered sessions/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 60ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-06 18:41:07 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.1ms)
+  Rendered sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-06 18:41:46 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 18:41:51 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 403ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-06 18:41:57 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.9ms)
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-06 18:41:57 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.1ms)
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-09-06 18:42:03 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"omn1Jp+/ZbGGjFtLLFVpRnVWtxstp6WWhULFK8zjLqzenI0adX526kpC1OC82PuPt6cZie1NEfbTc0cL8XRPYw==", "email"=>"ginasunah33@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ginasunah33@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 69ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 18:42:03 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 164ms (Views: 22.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-09-06 18:42:50 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 18:42:50 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 160ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 18:42:50 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 212ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 19:01:35 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 249ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home?lat=43.751773850000006&lng=-79.36205330000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 19:15:18 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.751773850000006", "lng"=>"-79.36205330000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 517ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-06 19:17:43 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.5ms)
+  Rendered sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-06 19:17:43 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (0.8ms)
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-09-06 19:17:50 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QzjDv2XvkhynHrxQyNJ2qjOElfQz4lOXB07WI3ugy9U/zbuDjy6BR2vQM/tYX+Rj8XU7ZvMI5/dRf1QDRjeqGg==", "email"=>"ginasunah33@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ginasunah33@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 62ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 19:17:50 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 204ms (Views: 29.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 19:33:20 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 218ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.74933295&lng=-79.36203725000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 19:34:40 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.74933295", "lng"=>"-79.36203725000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 331ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 19:42:10 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 1276ms (Views: 108.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 19:42:19 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 568ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 19:43:02 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 294ms (Views: 117.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home?lat=43.73829740000001&lng=-79.42510855&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 19:43:11 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.73829740000001", "lng"=>"-79.42510855", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 469ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 19:44:11 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 272ms (Views: 35.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 19:44:19 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 655ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:02:34 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 1288ms (Views: 104.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:02:43 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 175ms (Views: 22.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:02:49 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 1102ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:03:50 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 247ms (Views: 82.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:03:58 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 606ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:04:53 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 289ms (Views: 80.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:05:00 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 695ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:05:03 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 621ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:05:04 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 219ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:06:11 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 189ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.6450066&lng=-79.38707175000002&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:06:25 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.6450066", "lng"=>"-79.38707175000002", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 754ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:11:58 -0400
+Processing by HomeController#index as HTML
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:11:59 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 1206ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 517ms (Views: 38.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:11:59 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 164ms (Views: 42.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:16:09 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 248ms (Views: 82.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:16:14 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 161ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.751773850000006&lng=-79.36205330000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:16:26 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.751773850000006", "lng"=>"-79.36205330000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 797ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:21:49 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 1257ms (Views: 100.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:22:00 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 474ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:22:59 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 237ms (Views: 96.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:23:05 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 1593ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:24:10 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 1245ms (Views: 76.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:24:22 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 479ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:24:46 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 232ms (Views: 84.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:24:54 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 662ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:31:16 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 221ms (Views: 75.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:31:27 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 589ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:33:18 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 255ms (Views: 94.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:33:32 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 554ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:34:03 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 231ms (Views: 86.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:34:10 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 699ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:34:47 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 291ms (Views: 102.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:34:56 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 664ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:35:22 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 292ms (Views: 122.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:35:30 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 623ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:35:45 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 208ms (Views: 75.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:35:51 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 484ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:36:37 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 276ms (Views: 87.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:36:44 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 509ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:38:41 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 308ms (Views: 81.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:38:53 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 575ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:39:09 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 218ms (Views: 82.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:39:17 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 602ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:43:02 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 300ms (Views: 80.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:43:12 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 586ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:43:32 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 221ms (Views: 88.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:43:38 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 468ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:46:49 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 1268ms (Views: 79.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:47:06 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 559ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 20:55:19 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 272ms (Views: 111.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 20:55:27 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 425ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 21:01:51 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 262ms (Views: 106.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 21:01:59 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 387ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 21:03:39 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 258ms (Views: 93.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 21:03:47 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 554ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 21:07:48 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 265ms (Views: 96.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 21:07:54 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 152ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 21:08:01 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 821ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 21:13:20 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 214ms (Views: 82.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.6582125&lng=-79.33865055000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 21:13:29 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.6582125", "lng"=>"-79.33865055000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 778ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 21:13:52 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 253ms (Views: 102.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 21:13:59 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 519ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 21:15:54 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 255ms (Views: 95.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-06 21:16:06 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 533ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 21:17:15 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 1289ms (Views: 102.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-06 21:17:16 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 149ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-07 10:21:36 -0400
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (5.3ms)
+Completed 200 OK in 22ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 10:22:41 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (339.8ms)
+Completed 200 OK in 1384ms (Views: 361.8ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-07 10:23:27 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 568ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 10:29:16 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 908ms (Views: 105.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-07 10:29:23 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 615ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 10:29:30 -0400
+Processing by HomeController#index as HTML
+Started GET "/home" for 127.0.0.1 at 2017-09-07 10:29:30 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 1203ms (Views: 42.5ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 879ms (Views: 37.2ms | ActiveRecord: 24.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 10:29:31 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 179ms (Views: 27.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home?lat=43.6582125&lng=-79.33865055000001&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-07 10:29:40 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.6582125", "lng"=>"-79.33865055000001", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 937ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 10:29:58 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 458ms (Views: 21.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 10:29:58 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 155ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-07 10:31:00 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 888ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 10:32:32 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 177ms (Views: 25.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 10:32:32 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 162ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 10:32:38 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 196ms (Views: 32.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-07 10:32:48 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 513ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 10:32:58 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 159ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 10:32:58 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 165ms (Views: 26.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.650336749999994&lng=-79.38513605000003&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-07 10:39:47 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.650336749999994", "lng"=>"-79.38513605000003", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 1442ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 10:51:59 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 1219ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 10:52:01 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 187ms (Views: 35.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-07 10:53:35 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 571ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 11:01:30 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 1263ms (Views: 97.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-07 11:01:41 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 359ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 11:03:26 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 1253ms (Views: 92.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-07 11:03:36 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 340ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 11:04:25 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 247ms (Views: 98.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-07 11:04:32 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 638ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 11:16:19 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 1261ms (Views: 91.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-07 11:16:31 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 340ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 11:17:09 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 208ms (Views: 43.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=bars" for 127.0.0.1 at 2017-09-07 11:19:37 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"bars"}
+Completed 200 OK in 434ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 11:28:30 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 264ms (Views: 102.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 11:28:37 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 158ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-07 11:28:44 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 1796ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 11:30:53 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 747ms (Views: 90.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-07 11:31:00 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 730ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 11:31:29 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 2034ms (Views: 43.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 13:53:39 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (326.8ms)
+Completed 200 OK in 619ms (Views: 375.2ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/home?lat=43.7546631&lng=-79.36010154999997&radius=500&term=restaurants" for 127.0.0.1 at 2017-09-07 13:53:50 -0400
+Processing by HomeController#index as JSON
+  Parameters: {"lat"=>"43.7546631", "lng"=>"-79.36010154999997", "radius"=>"500", "term"=>"restaurants"}
+Completed 200 OK in 526ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+

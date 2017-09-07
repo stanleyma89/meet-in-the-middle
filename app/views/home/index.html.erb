@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag    'home', media: 'all' %>
 <%= javascript_include_tag 'home' %>
-
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 <% if current_user %>
 
   <div id = "add-address">
@@ -39,10 +39,10 @@
 
   <div id="map"></div>
   <div class="photos">
-    <ul id="yelp_info">
+    <div id="yelp_info">
 
-    </ul>
     </div>
+  </div>
 
 <% else %>
 
@@ -82,9 +82,9 @@
 
   <div id="map"></div>
   <div class="photos">
-    <ul id="yelp_info">
+    <div id="yelp_info">
 
-    </ul>
+    </div>
     </div>
 
 <% end %>
