@@ -1,4 +1,4 @@
-<%= form_tag sessions_path, :method => :post do %>
+<%= form_tag sessions_path, :id => 'login', :method => :post do %>
   <div class="field">
     <%= label_tag :email %><br />
     <%= text_field_tag :email %>
@@ -16,4 +16,5 @@
   <div class="actions">
     <%= submit_tag "Login" %>
   </div>
+  <%= link_to 'Back',  home_index_url %>
 <% end %>
