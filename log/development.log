@@ -10180,3 +10180,17 @@ Processing by FrontPageController#index as HTML
 Completed 200 OK in 118ms (Views: 114.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/front_page" for 127.0.0.1 at 2017-09-06 23:21:37 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (108.3ms)
+Completed 200 OK in 7801ms (Views: 7798.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-06 23:24:45 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 142ms (Views: 138.2ms | ActiveRecord: 0.0ms)
+
+
