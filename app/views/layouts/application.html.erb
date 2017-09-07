@@ -28,7 +28,7 @@
               <%= link_to 'Meet in the Middle', front_page_index_path, class:"navbar-brand" %>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
+              <ul class="nav navbar-nav navbar-right">
                 <li class="active"><%= link_to 'Home', front_page_index_path %></li>
                 <% if session[:user_id] != nil %>
                   <li><%= link_to "Logout", :logout%></li>
