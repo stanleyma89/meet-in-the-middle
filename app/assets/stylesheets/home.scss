@@ -14,6 +14,14 @@ html{
   box-sizing: inherit;
 }
 
+h5 {
+  color: white;
+}
+
+#demo {
+  color: white;
+}
+
 .header_nav {
   // margin: 30px;
   // float: right;
@@ -35,6 +43,7 @@ html{
 }
 
 .map_pos {
+  opacity: 0.97;
   margin-left: 100px;
   height: 75%;
   margin-top: 80px;
@@ -58,8 +67,9 @@ html{
 }
 
 .menu-box {
+  border-radius: 3%;
   height: 75%;
-  margin-top: 80px;
+  margin: 80px 0 0 25px;
   background: rgba(175, 175, 175, 0.2);
 }
 
@@ -127,6 +137,12 @@ height: 30px;
   margin-top: 10  px;
 }
 
+#pac-container {
+  max-height: 290px;
+  overflow-y: auto;
+}
+
+
 #pac-container, #add-address {
         padding-bottom: 12px;
         margin-right: 12px;
@@ -158,6 +174,13 @@ height: 30px;
 #slidecontainer {
     width: 100%;
 }
+
+
+#slidecontainer > p {
+    color: white;
+}
+
+
 
 .slider {
     -webkit-appearance: none;

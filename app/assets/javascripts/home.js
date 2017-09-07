@@ -29,8 +29,8 @@ function initMap() {
     var output = document.getElementById("demo");
     output.innerHTML = slider.value;
     slider.oninput = function() {
-    output.innerHTML = this.value;
     slideVal = this.value;
+    output.innerHTML = this.value;
     }
 
 
