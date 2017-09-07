@@ -24808,3 +24808,930 @@ Processing by HomeController#index as JSON
 Completed 200 OK in 736ms (Views: 5.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-09-07 16:56:00 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+Started GET "/" for 127.0.0.1 at 2017-09-07 16:56:04 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (11033.6ms)
+  Rendered front_page/index.html.erb within layouts/application (7902.8ms)
+Completed 200 OK in 11382ms (Views: 11369.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 8259ms (Views: 8203.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 16:56:21 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 346ms (Views: 124.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 16:56:22 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 258ms (Views: 105.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 16:56:25 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 157ms (Views: 101.2ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 16:56:25 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 85ms (Views: 80.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 16:56:33 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.5ms)
+  Rendered sessions/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 94ms (Views: 90.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 16:56:33 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.7ms)
+  Rendered sessions/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 112ms (Views: 109.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 16:56:35 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 92ms (Views: 89.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 16:57:08 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 163ms (Views: 159.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 16:57:15 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 174ms (Views: 171.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 16:57:27 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 155ms (Views: 150.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 16:57:28 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 112ms (Views: 109.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 16:59:48 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 115ms (Views: 108.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 17:00:11 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 122ms (Views: 118.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 17:02:43 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 111ms (Views: 108.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 17:03:50 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 145ms (Views: 141.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 17:03:52 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 135ms (Views: 131.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 17:05:56 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (287.9ms)
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( users.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag    'users', media: 'all' %>
+    2: <h1>Sign Up!</h1>
+    3: 
+    4: <% if @user.errors.any?  %>
+  
+app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb__541290931977216121_70110361198200'
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 17:06:52 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (87.5ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( users.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag    'users', media: 'all' %>
+    2: <h1>Sign Up!</h1>
+    3: 
+    4: <% if @user.errors.any?  %>
+  
+app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb__541290931977216121_70110394401480'
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 17:07:08 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (459.5ms)
+Completed 200 OK in 755ms (Views: 714.1ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 17:07:32 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 102ms (Views: 98.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 17:07:32 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 151ms (Views: 147.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 17:09:40 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 314ms (Views: 311.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 17:12:45 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 209ms (Views: 205.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:12:49 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 388ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 17:12:53 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 112ms (Views: 108.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 17:12:53 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (15.5ms)
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 17:12:53 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (44.9ms)
+Completed 200 OK in 197ms (Views: 193.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 277ms (Views: 254.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 17:22:13 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 102ms (Views: 98.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 17:22:13 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 104ms (Views: 101.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 17:22:21 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.7ms)
+  Rendered sessions/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 87ms (Views: 83.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 17:22:21 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.5ms)
+  Rendered sessions/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 95ms (Views: 92.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 17:22:22 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 110ms (Views: 106.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:22:23 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (184.0ms)
+Completed 200 OK in 474ms (Views: 282.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 17:22:31 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 95ms (Views: 92.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 17:22:31 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (12.5ms)
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 17:22:31 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 228ms (Views: 223.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 241ms (Views: 213.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 17:24:27 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 98ms (Views: 94.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 17:24:27 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 118ms (Views: 115.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 17:26:28 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 88ms (Views: 85.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 17:26:31 -0400
+Processing by FrontPageController#index as HTML
+  Rendering front_page/index.html.erb within layouts/application
+  Rendered front_page/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 98ms (Views: 95.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:27:40 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 291ms (Views: 90.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:27:40 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 290ms (Views: 98.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:29:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/map" for 127.0.0.1 at 2017-09-07 17:29:31 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (11.3ms)
+Completed 500 Internal Server Error in 851ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_index_path' for #<#<Class:0x007fa0c910b0c8>:0x007fa0c90f3d38>):
+    33:                 <% if session[:user_id] != nil %>
+    34:                   <li><%= link_to "Logout", :logout%></li>
+    35:                 <% else %>
+    36:                   <li><%= link_to 'Try Now', home_index_path %></li>
+    37:                   <li><%= link_to 'Sign Up', new_user_path %></li>
+    38:                   <li><%= link_to 'Log In', login_path %></li>
+    39:                 <% end %>
+  
+app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb___1167021556665588135_70164272285880'
+Started GET "/map" for 127.0.0.1 at 2017-09-07 17:30:46 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "home.js" is not present in the asset pipeline.):
+    1: <%= stylesheet_link_tag    'home', media: 'all' %>
+    2: <%= javascript_include_tag 'home' %>
+    3: <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    4: 
+    5: <% if current_user %>
+  
+app/views/map/index.html.erb:2:in `_app_views_map_index_html_erb___596130155352893402_70164274992620'
+Started GET "/map" for 127.0.0.1 at 2017-09-07 17:32:47 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (410.6ms)
+Completed 500 Internal Server Error in 615ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( map.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag    'map', media: 'all' %>
+    2: <%= javascript_include_tag 'map' %>
+    3: <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    4: 
+  
+app/views/map/index.html.erb:1:in `_app_views_map_index_html_erb___596130155352893402_70164279783600'
+Started GET "/map" for 127.0.0.1 at 2017-09-07 17:32:54 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (40.5ms)
+Completed 500 Internal Server Error in 221ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( map.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag    'map', media: 'all' %>
+    2: <%= javascript_include_tag 'map' %>
+    3: <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    4: 
+  
+app/views/map/index.html.erb:1:in `_app_views_map_index_html_erb___596130155352893402_70164274446460'
+Started GET "/map" for 127.0.0.1 at 2017-09-07 17:33:51 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (440.9ms)
+Completed 500 Internal Server Error in 1338ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_index_path' for #<#<Class:0x007f923b588bb0>:0x007f923b57a880>):
+    33:                 <% if session[:user_id] != nil %>
+    34:                   <li><%= link_to "Logout", :logout%></li>
+    35:                 <% else %>
+    36:                   <li><%= link_to 'Try Now', home_index_path %></li>
+    37:                   <li><%= link_to 'Sign Up', new_user_path %></li>
+    38:                   <li><%= link_to 'Log In', login_path %></li>
+    39:                 <% end %>
+  
+app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb__4497247855018688538_70133045958000'
+Started GET "/map" for 127.0.0.1 at 2017-09-07 17:35:33 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 281ms (Views: 108.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 17:41:53 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 585ms (Views: 115.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 17:42:46 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 256ms (Views: 85.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 17:45:24 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 525ms (Views: 208.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 17:45:28 -0400
+Processing by FrontPageController#index as HTML
+Completed 406 Not Acceptable in 58ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (FrontPageController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.3) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 17:46:09 -0400
+  
+ActionController::RoutingError (uninitialized constant FrontPageController):
+  
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.3) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/front_page" for 127.0.0.1 at 2017-09-07 17:46:16 -0400
+  
+ActionController::RoutingError (uninitialized constant FrontPageController):
+  
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.3) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:46:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:46:52 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (301.2ms)
+Completed 500 Internal Server Error in 314ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( home.css )` to `config/initializers/assets.rb` and restart your server):
+     7:     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+     8:     <meta name="description" content="">
+     9:     <meta name="author" content="">
+    10:     <%= stylesheet_link_tag    'home', media: 'all' %>
+    11: 
+    12:   </head>
+    13: 
+  
+app/views/home/index.html.erb:10:in `_app_views_home_index_html_erb__3422687989525888904_70133036154260'
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:47:30 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (45.8ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( home.css )` to `config/initializers/assets.rb` and restart your server):
+     7:     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+     8:     <meta name="description" content="">
+     9:     <meta name="author" content="">
+    10:     <%= stylesheet_link_tag    'home', media: 'all' %>
+    11: 
+    12:   </head>
+    13: 
+  
+app/views/home/index.html.erb:10:in `_app_views_home_index_html_erb__3422687989525888904_70133096557180'
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:47:56 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (67.0ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( home.css )` to `config/initializers/assets.rb` and restart your server):
+     7:     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+     8:     <meta name="description" content="">
+     9:     <meta name="author" content="">
+    10:     <%= stylesheet_link_tag    'home', media: 'all' %>
+    11: 
+    12:   </head>
+    13: 
+  
+app/views/home/index.html.erb:10:in `_app_views_home_index_html_erb__3422687989525888904_70133031083680'
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:48:06 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (418.5ms)
+Completed 500 Internal Server Error in 1141ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `front_page_index_path' for #<#<Class:0x007fa2a4059f58>:0x007fa2a4049478>):
+    25:                 <span class="icon-bar"></span>
+    26:                 <span class="icon-bar"></span>
+    27:               </button>
+    28:               <%= link_to 'Meet in the Middle', front_page_index_path, class:"navbar-brand" %>
+    29:             </div>
+    30:             <div id="navbar" class="navbar-collapse collapse">
+    31:               <ul class="nav navbar-nav navbar-right">
+  
+app/views/layouts/application.html.erb:28:in `_app_views_layouts_application_html_erb___1232069811350801601_70168256519440'
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:48:36 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 525ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `front_page_index_path' for #<#<Class:0x007fa2a4059f58>:0x007fa2a42725b0>):
+    29:             </div>
+    30:             <div id="navbar" class="navbar-collapse collapse">
+    31:               <ul class="nav navbar-nav navbar-right">
+    32:                 <li class="active"><%= link_to 'Home', front_page_index_path %></li>
+    33:                 <% if session[:user_id] != nil %>
+    34:                   <li><%= link_to "Logout", :logout%></li>
+    35:                 <% else %>
+  
+app/views/layouts/application.html.erb:32:in `_app_views_layouts_application_html_erb___1232069811350801601_70168257659160'
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:48:50 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 120ms (Views: 113.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 17:48:54 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 1395ms (Views: 99.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 17:48:57 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 148ms (Views: 113.7ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 17:48:57 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 113ms (Views: 108.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 17:48:59 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.8ms)
+  Rendered sessions/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 90ms (Views: 86.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-09-07 17:49:04 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i2sA9Jc3tf2n1H/BD70DVK6UH7WQ3ZzTNOwEKo1TpDbEBlMFq6uqi/8Yq0P+sVCKCd11NS2ETLY4pMUy1KW+NQ==", "email"=>"stan@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "stan@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 109ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:49:05 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 83ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:49:22 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 90ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 17:49:30 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered map/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 278ms (Views: 79.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:49:34 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 100ms (Views: 97.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:49:34 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 167ms (Views: 163.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:50:39 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 153ms (Views: 150.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 17:50:42 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered map/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 439ms (Views: 121.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:50:45 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 112ms (Views: 108.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:50:45 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:50:45 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (36.7ms)
+  Rendered home/index.html.erb within layouts/application (72.4ms)
+Completed 200 OK in 262ms (Views: 258.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 249ms (Views: 244.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 17:51:35 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered map/index.html.erb within layouts/application (198.6ms)
+Completed 200 OK in 529ms (Views: 309.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 17:51:35 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered map/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 375ms (Views: 110.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 17:51:50 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered map/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 1289ms (Views: 82.5ms | ActiveRecord: 0.4ms)
+
+

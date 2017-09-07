@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
   root 'front_page#index'
 
-  resources :front_page, only: [:index]
-  resources :home
+  resources :home, only: [:index]
+  resources :map
   resources :users, only: [:new, :create]
   resources :sessions, only: [:create, :destroy]
 
