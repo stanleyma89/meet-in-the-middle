@@ -143,7 +143,7 @@ function autocomplete(autocompleteC) {
     }
     // createMarker(lonLatC);
     // console.log(locations);
-
+    // 
     // var markers = new google.maps.Marker({
     //   map: map,
     //   position: lonLatC
