@@ -32,6 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'geocoder'
 gem 'jquery-rails'
 gem 'httparty'
+gem 'bootstrap-sass', '~> 3.3.6'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

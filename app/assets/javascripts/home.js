@@ -10,7 +10,72 @@ function initMap() {
 // Creates map and sets starting view and zoom
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 43.6532, lng: -79.3832},
-    zoom: 11
+    zoom: 11,
+    styles: [
+    {
+        "featureType": "administrative.province",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#434242"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.locality",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#434242"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.neighborhood",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#434242"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit.line",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#0073ff"
+            }
+        ]
+    }
+]
   });
 
   var input = document.getElementById('pac-input');
@@ -27,10 +92,10 @@ function initMap() {
 
     var slider = document.getElementById("myRange");
     var output = document.getElementById("demo");
-    output.innerHTML = slider.value;
+    output.innerHTML = (slider.value / 1000);
     slider.oninput = function() {
-    output.innerHTML = this.value;
     slideVal = this.value;
+    output.innerHTML = (this.value / 1000) ;
     }
 
 
@@ -44,6 +109,7 @@ function initMap() {
     addressList.id = "address"
     addressInput.type = "text";
     addressInput.id = "pac-input";
+    addressInput.className = "input-lg";
     addressInput.placeholder = "Add Address";
     addressList.append(addressInput);
     addressContainer.append(addressList);
@@ -77,7 +143,7 @@ function autocomplete(autocompleteC) {
     }
     // createMarker(lonLatC);
     // console.log(locations);
-
+    //
     // var markers = new google.maps.Marker({
     //   map: map,
     //   position: lonLatC

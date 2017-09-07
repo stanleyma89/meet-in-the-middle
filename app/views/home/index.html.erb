@@ -3,46 +3,95 @@
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 <% if current_user %>
 
-  <div id = "add-address">
-    <button id = "add" type="button" name="add">Add Address</button>
-  </div>
-  <div id="pac-container">
-    <ul id = "address-container">
-      <li id = "address">
-      <input id="pac-input" type="text"
-          value="<%=  %>"></li>
-      <li id = "address"><input id="pac-output" type="text"
-          placeholder="Point B"></li>
-    </ul>
-    <input type="button" value = "Refresh Page" onClick = "window.location.reload()">
-    <select id = "categories">
-      <option value="restaurants">Restaurant</option>
-      <option value="bars">Bar</option>
-      <option value="cafe">Cafe</option>
-      <option value="fitness">Fitness</option>
-      <option value="movietheaters">Movie Theater</option>
-      <option value="discgolf">Golf</option>
-      <option value="bowling">Bowling</option>
-      <option value="museums">Museums</option>
-      <option value="festivals">Festivals</option>
-    </select>
-  </div>
+<section class="row" id="top_row">
+  <div class="col-lg-12 big-cont">
+    <div class="col-lg-5 col-md-5 menu-box">
+      <div class="menu-inner-box">
 
-  <h3>Set Radius</h3>
+        <div class="col-lg-8 row">
 
-  <div id="slidecontainer">
-    <input type="range" min="500" max="2000" value="50" class="slider" id="myRange">
-    <p><span id="demo"></span> Meters</p>
-  </div>
+        <div id="pac-container">
 
-  <input id = "submit" type="submit" name="submit" value="submit">
+          <ul id = "address-container">
 
-  <div id="map"></div>
-  <div class="photos">
-    <div id="yelp_info">
+          <li id = "address">
+          <input class="input-lg" id="pac-input" type="text"
+            placeholder="Point A"></li>
+          <li id = "address">
+            <input class="input-lg" id="pac-output" type="text"
+           placeholder="Point B"></li>
+          </ul>
+        </div>
+      </div>
+
+        <div class="col-lg-4 row">
+
+
+          <!-- <div id = "add-address">
+        </div> -->
+        <button class="btn-default btn-lg btn-mrg" id = "add" type="button" name="add">Add Address</button>
+
+        <select class="form-control btn-lg btn-mrg" id = "categories" style>
+          <option value="restaurants">Restaurant</option>
+          <option value="bars">Bar</option>
+          <option value="cafe">Cafe</option>
+          <option value="fitness">Fitness</option>
+          <option value="movietheaters">Movie Theater</option>
+          <option value="discgolf">Golf</option>
+          <option value="bowling">Bowling</option>
+          <option value="museums">Museums</option>
+          <option value="festivals">Festivals</option>
+        </select>
+
+          <input type="button" class="btn-default btn-lg btn-mrg" id="reset-btn" value = "Refresh Page" onClick = "window.location.reload()">
+
+
+        </div>
+
+
+
+        <div class="col-lg-8 col-lg-offset-2 row slide">
+
+        <h5>Set Radius</h5>
+
+        <div id="slidecontainer">
+          <input type="range" min="500" max="1500" value="50" class="slider" id="myRange">
+          <p><span id="demo"></span> KM</p>
+        </div>
+      </div>
+
+        <div class="col-lg-8 col-lg-offset-2 row submitbutton">
+          <input class="btn-block btn-primary" id = "submit" type="submit" name="submit" value="Meet In The Middle!">
+        </div>
+      </div>
 
     </div>
   </div>
+
+
+
+
+
+
+    <div class="col-lg-6 col-md-6 map_pos">
+      <div id="map"></div>
+
+    </div>
+
+
+
+  </div>
+</section>
+
+<div class="photos">
+  <div id="yelp_info"></div>
+</div>
+
+<!-- <div class="photos">
+  <ul id="yelp_info">
+  </ul> -->
+
+
 
 <% else %>
 

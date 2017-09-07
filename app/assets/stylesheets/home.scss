@@ -5,13 +5,20 @@
 html{
   /*font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   box-sizing: border-box;
-  background: grey;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+h5 {
+  color: white;
+}
+
+#demo {
+  color: white;
 }
 
 .header_nav {
@@ -33,6 +40,15 @@ html{
   float: right;
 
 }
+
+.map_pos {
+  opacity: 0.97;
+  margin-left: 100px;
+  height: 75%;
+  margin-top: 80px;
+}
+
+
 
 .star-ratings-sprite {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
@@ -84,10 +100,7 @@ a:active {
     color: black;
 }
 
-#map {
-  height: 50%;
-  width: 100%;
-}
+
 #yelp_info{
   margin: 5px auto;
   text-align: center;
@@ -107,6 +120,64 @@ a:active {
 p{
   margin: 2px auto;
 }
+
+
+
+
+#map {
+  height: 100%;
+}
+
+.big-cont {
+  height: 100%;
+}
+
+#add {
+  width: 100%;
+}
+
+#reset-btn {
+  width: 100%;
+  background-color: #E6B0AA;
+}
+
+.btn-mrg {
+  color: #1F618D;
+  margin-top: 10px;
+}
+
+#categories {
+  height: 50px;
+}
+
+.menu-box {
+  border-radius: 3%;
+  height: 75%;
+  margin: 80px 0 0 25px;
+  background: rgba(175, 175, 175, 0.2);
+}
+
+.menu-inner-box {
+  opacity: 0.9;
+  margin-top: 50px;
+}
+
+.address-bar {
+  margin-left: 11px;
+}
+
+.slide {
+  margin-top: 50px;
+}
+
+.submitbutton {
+  margin-top: 50px;
+}
+
+#submit {
+  border-radius: 24px;
+}
+
 /* Optional: Makes the sample page fill the window. */
 html, body {
   height: 100%;
@@ -126,16 +197,39 @@ img {
 height: 30px;
 }
 
-#add {
-  font-size: 15px;
-  font-weight: 300;
-  margin-left: 12px;
-  padding: 0 11px 0 13px;
-  width: 200px;
+.default-button {
+  font-size: 100%;
+  text-align: center;
+  margin: 30px;
+  width: 250px;
+  height: 30px;
 }
+
 #address{
+  margin: 11px;
   display: block;
 }
+
+#top_row {
+  background-image: image-url("patio.jpeg");
+
+  // background: red;
+  width: 100%;
+  height: 800px;
+  margin: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.top_six {
+  margin-top: 10  px;
+}
+
+#pac-container {
+  max-height: 290px;
+  overflow-y: auto;
+}
+
 
 #pac-container, #add-address {
         padding-bottom: 12px;
@@ -168,6 +262,13 @@ height: 30px;
 #slidecontainer {
     width: 100%;
 }
+
+
+#slidecontainer > p {
+    color: white;
+}
+
+
 
 .slider {
     -webkit-appearance: none;
@@ -208,4 +309,122 @@ height: 30px;
   height: 16px;
   display: block;
   background: url('http://www.itsalif.info/blogfiles/rating/star-rating.png') 0 0 no-repeat;
+}
+
+
+* { box-sizing:border-box; }
+
+/* basic stylings ------------------------------------------ */
+// body 				 { background:url(https://scotch.io/wp-content/uploads/2014/07/61.jpg); }
+// .container 		{
+//   font-family:'Roboto';
+//   width:600px;
+//   margin:30px auto 0;
+//   display:block;
+//   background:#FFF;
+//   padding:10px 50px 50px;
+// }
+// h2 		 {
+//   text-align:center;
+//   margin-bottom:50px;
+// }
+// h2 small {
+//   font-weight:normal;
+//   color:#888;
+//   display:block;
+// }
+// .footer 	{ text-align:center; }
+// .footer a  { color:#53B2C8; }
+//
+/* form starting stylings ------------------------------- */
+.group 			  {
+  position:relative;
+  margin-bottom:45px;
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#999;
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px;
+  width:0;
+  bottom:1px;
+  position:absolute;
+  background:#5264AE;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%;
+  width:100px;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
 }

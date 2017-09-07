@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new', :as => :login
   get 'logout' => 'sessions#destroy', :as => :logout
 
+  root 'front_page#index'
+
+  resources :front_page, only: [:index]
   resources :home
   resources :users, only: [:new, :create]
   resources :sessions, only: [:create, :destroy]
