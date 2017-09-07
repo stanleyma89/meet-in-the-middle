@@ -350,13 +350,16 @@ function autocomplete(autocompleteC) {
                 var div = document.createElement('div');
                 var name = document.createElement('p');
                 var img = document.createElement('img');
-
+                var a = document.createElement('a');
                 if (businessPic[i]) {
                   img.src = businessPic[i];
                 } else {
                   img.src = "http://skolarships.com/admin/scholarship_images/no-img.jpg";
                 }
-                
+
+                // a.href = "#" + businessId[i];
+                // a.innerHTML = "Click Here!";
+
                 img.align = "left";
                 img.style.width = "150px";
                 img.style.height = "150px";
@@ -365,6 +368,13 @@ function autocomplete(autocompleteC) {
                 // div.href = '#' + businessId[i];
                 div.appendChild(name);
                 div.append(img);
+                // div.append(a);
+
+                // div.addEventListener('click', function(e){
+                //   // pName.id = businessId[i];
+                //   a.href = "#" + businessId[i];
+                //
+                // })
                 infowindow.setContent(div.innerHTML);
                 infowindow.open(map, marker);
                 console.log(img, name, a );
