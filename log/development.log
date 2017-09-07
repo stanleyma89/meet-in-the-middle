@@ -25735,3 +25735,431 @@ Processing by MapController#index as HTML
 Completed 200 OK in 1289ms (Views: 82.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:57:50 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (91.0ms)
+Completed 200 OK in 8567ms (Views: 8563.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 17:57:58 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 136ms (Views: 132.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-09-07 17:59:48 -0400
+Processing by SessionsController#destroy as HTML
+Completed 500 Internal Server Error in 302ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `front_page_index_path' for #<SessionsController:0x007fa2a7658d70>):
+  
+app/controllers/sessions_controller.rb:25:in `destroy'
+Started GET "/logout" for 127.0.0.1 at 2017-09-07 18:00:07 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:00:07 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 146ms (Views: 144.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:00:11 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 98ms (Views: 95.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:01:00 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 143ms (Views: 140.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:01:02 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 138ms (Views: 134.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:01:03 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 193ms (Views: 189.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:01:03 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (48.8ms)
+Completed 200 OK in 201ms (Views: 197.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-07 18:01:06 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 123ms (Views: 119.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 18:01:18 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (179.7ms)
+Completed 200 OK in 487ms (Views: 289.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 18:01:19 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 294ms (Views: 135.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-07 18:01:20 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 127ms (Views: 123.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-07 18:01:20 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 183ms (Views: 178.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 18:01:24 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 130ms (Views: 94.3ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 18:01:27 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (2.5ms)
+  Rendered sessions/new.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 118ms (Views: 112.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 18:01:27 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (2.1ms)
+  Rendered sessions/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 123ms (Views: 118.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-07 18:01:29 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 136ms (Views: 133.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 18:01:32 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 88ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 18:11:11 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 99ms (Views: 96.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:11:12 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 104ms (Views: 100.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 18:11:36 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.6ms)
+  Rendered sessions/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 81ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 18:11:36 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.4ms)
+  Rendered sessions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 105ms (Views: 102.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-09-07 18:12:55 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6UCfHwF5m8mwFm7JwkMoqhw2ufVeOFYoWvXH4GHlIb367DRkay2o03AKaPKdLUV3MpTLhEmOZl8Ff9+cY6HDvg==", "email"=>"stan@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "stan@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 105ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:12:55 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 189ms (Views: 186.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 18:13:01 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered map/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 310ms (Views: 64.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 18:13:01 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered map/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 540ms (Views: 85.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:13:05 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 79ms (Views: 76.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:13:05 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 98ms (Views: 95.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 18:13:23 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered map/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 237ms (Views: 61.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 18:13:23 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered map/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 257ms (Views: 91.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:13:51 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 81ms (Views: 79.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:13:51 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 102ms (Views: 96.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:14:26 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 79ms (Views: 76.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:14:26 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 97ms (Views: 93.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-09-07 18:14:55 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:14:55 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 81ms (Views: 78.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:14:55 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 105ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 18:14:57 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 1381ms (Views: 88.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:15:01 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 103ms (Views: 100.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:16:30 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 90ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:16:30 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 104ms (Views: 101.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 18:16:38 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 236ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 18:16:38 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 260ms (Views: 99.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:17:55 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 84ms (Views: 81.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:17:55 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 122ms (Views: 117.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 18:19:19 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 333ms (Views: 81.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 18:19:19 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 288ms (Views: 99.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 18:19:23 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 80ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-07 18:19:24 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 94ms (Views: 90.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 18:19:25 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  Rendered map/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 233ms (Views: 85.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 18:19:29 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.8ms)
+  Rendered sessions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 97ms (Views: 94.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-07 18:19:29 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.5ms)
+  Rendered sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 84ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-09-07 18:19:34 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h2YE//HxMSXpn6YfEs9g45kO5c4tLuX8ViVKL8os/wmUyq+Em6UCPymDoCRNoQ0+t6yXvzqY1YsJr1JTyGgdCg==", "email"=>"stan@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "stan@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 101ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-09-07 18:19:34 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 81ms (Views: 78.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 18:20:00 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered map/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 3209ms (Views: 72.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/map" for 127.0.0.1 at 2017-09-07 18:20:03 -0400
+Processing by MapController#index as HTML
+  Rendering map/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered map/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 728ms (Views: 106.5ms | ActiveRecord: 0.4ms)
+
+

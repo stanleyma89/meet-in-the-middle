@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new', :as => :login
   get 'logout' => 'sessions#destroy', :as => :logout
 
-  root 'front_page#index'
+  root 'home#index'
 
   resources :home, only: [:index]
   resources :map
