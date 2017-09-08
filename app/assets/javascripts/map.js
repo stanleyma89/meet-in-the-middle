@@ -334,6 +334,7 @@ function initMap() {
     var circle = new google.maps.Circle({
       map: map,
       radius: slideVal * 2,    // 10 miles in metres
+      fillOpacity: 0.1,
       fillColor: '#AA0000'
     });
     circle.bindTo('center', marker, 'position');

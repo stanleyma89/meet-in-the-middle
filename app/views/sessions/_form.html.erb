@@ -1,14 +1,23 @@
 <%= form_tag sessions_path, :id => 'login', :method => :post do %>
-  <div class="field">
-    <%= label_tag :email %><br />
+
+<div class="form">
+
+
+  <div class="group">
     <%= text_field_tag :email %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %><br />
-    <%= password_field_tag :password %>
+    <%= label_tag :email %>
+    <span class="highlight"></span>
+    <span class="bar"></span>
   </div>
 
-  <div class="field">
+  <div class="group">
+    <%= password_field_tag :password %>
+    <%= label_tag :password %>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+  </div>
+
+  <div class="group">
     <%= check_box_tag :remember_me %><br />
     <%= label_tag :remember_me %>
   </div>
@@ -18,3 +27,6 @@
   </div>
   <%= link_to 'Back',  home_index_url %>
 <% end %>
+
+
+</div>

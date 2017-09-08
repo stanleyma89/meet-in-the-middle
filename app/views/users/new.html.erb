@@ -9,43 +9,48 @@
   </ul>
 <% end %>
 
+<div class="form">
+
+
 <%= form_for @user do |f| %>
 
   <div class="group">
+    <%=f.text_field :first_name, required: true %>
     <%=f.label :first_name %>
     <span class="highlight"></span>
     <span class="bar"></span>
-    <%=f.text_field :first_name, required: true %>
   </div>
 
   <div class="group">
+    <%=f.text_field :last_name, required: true %>
     <%=f.label :last_name %>
     <span class="highlight"></span>
     <span class="bar"></span>
-    <%=f.text_field :last_name, required: true %>
   </div>
 
   <div class="group">
+    <%=f.text_field :email, required: true %>
     <%=f.label :email %>
     <span class="highlight"></span>
     <span class="bar"></span>
-    <%=f.text_field :email, required: true %>
   </div>
 
   <div class="group">
+    <%=f.password_field :password, required: true %>
     <%=f.label :password_field %>
     <span class="highlight"></span>
     <span class="bar"></span>
-    <%=f.password_field :password, required: true %>
   </div>
 
   <div class="group">
+    <%=f.password_field :password_confirmation, required: true %>
     <%=f.label :password_confirmation %>
     <span class="highlight"></span>
     <span class="bar"></span>
-    <%=f.password_field :password_confirmation, required: true %>
   </div>
 
   <%= f.submit 'Sign up!' %>
 
 <% end %>
+
+</div>
