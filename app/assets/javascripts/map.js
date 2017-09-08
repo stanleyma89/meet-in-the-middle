@@ -9,7 +9,7 @@ function initMap() {
 
   var locations = [];
 
-// Creates map and sets starting view and zoom
+// Creates map and sets starting view and zoom. Styles allows for custom map styles.
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 43.6532, lng: -79.3832},
     zoom: 11,
@@ -80,12 +80,16 @@ function initMap() {
 ]
   });
 
+
+  // Creates Point A and B search location bars + autocomple.
+
   var input = document.getElementById('pac-input');
   var output = document.getElementById('pac-output');
   var submit = document.getElementById('submit');
 
   var autocompleteA = new google.maps.places.Autocomplete(input);
   var autocompleteB = new google.maps.places.Autocomplete(output);
+
 
   // Allows users to select radius range
 
@@ -97,6 +101,7 @@ function initMap() {
   output.innerHTML = (this.value / 1000) ;
   }
 
+  // Allows for adding additional locations bars.
 
   var addressContainer = document.getElementById("address-container");
   var add = document.getElementById("add");
@@ -144,6 +149,8 @@ function initMap() {
   })
 }
 
+  // Listens for autocomplete location bar A
+
   autocompleteA.addListener('place_changed', function() {
     var lonLatA = [];
 
@@ -169,6 +176,8 @@ function initMap() {
     }
 
   })
+
+  // Listens for autocomplete location bar B
 
   autocompleteB.addListener('place_changed', function() {
 
@@ -197,6 +206,9 @@ function initMap() {
       map.setZoom(15);
     }
 
+
+    // Click function for submit button
+
     submit.addEventListener('click', function(){
 
       for (var i = 0; i < markers.length; i++) {
@@ -208,6 +220,7 @@ function initMap() {
       var categories = document.getElementById("categories");
       var categoryValue = categories.options[categories.selectedIndex].value;
 
+      //Ajax call to rails server to get Yelp api info
 
       $.ajax({
         url: '/map',
@@ -220,6 +233,8 @@ function initMap() {
           var businessName = [];
           var businessPic = [];
           var businessId = [];
+
+          // Collects Yelp data and places in DOM elements
 
           for (var i = 0; i < data.businesses.length; i++) {
             var divYelpInfo = document.querySelector('#yelp_info');
@@ -238,25 +253,24 @@ function initMap() {
             var pRating = document.createElement('p');
             var pType = document.createElement('p');
             var pUrl = document.createElement('a');
+
             divYelpList.className = "yelplistdiv"
             pUrl.href = data.businesses[i].url;
             pUrl.target = "_blank";
-            // pUrl.innerText = "link to website";
             img.width = "300";
             img.height = "300";
+
+            // Replaces blank images locations with default "no image pic"
             if (data.businesses[i].image_url) {
               img.src = data.businesses[i].image_url;
             } else {
               img.src = "http://skolarships.com/admin/scholarship_images/no-img.jpg"
             }
             pName.innerHTML = data.businesses[i].name.bold();
-            //////
             pName.id = data.businesses[i].id;
-            /////
             pType.innerHTML = data.businesses[i].categories[0]["title"];
             pAddress.innerHTML = "➤ "+data.businesses[i].location.display_address;
             pPhone.innerHTML = "☎ "+data.businesses[i].display_phone.substr(2);
-            // pUrl.innerHTML = data.businesses[i].url;
             pPrice.innerHTML = data.businesses[i].price;
             pRating.innerHTML = data.businesses[i].rating;
             pRating.innerText = (pRating.innerText / 5.0) * 100;
@@ -271,6 +285,7 @@ function initMap() {
             pUrl.append(divYelpList);
             divYelpInfo.append(pUrl);
 
+            // Stores Yelp results locations
             var yelpLat = data.businesses[i].coordinates.latitude;
             var yelpLong = data.businesses[i].coordinates.longitude;
 
@@ -283,17 +298,18 @@ function initMap() {
 
             var marker, i;
 
+            // Places markers on map based on Yelp results
             for (i = 0; i < businessName.length; i++) {
 
               var myLatlng = {lat: yelpLat, lng: yelpLong};
-
               var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-              });
+                  position: myLatlng,
+                  map: map,
+                });
 
               marker.setMap(map);
 
+              // Function for adding pics and names to marker infowindow
               google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {
                   var div = document.createElement('div');
@@ -326,11 +342,13 @@ function initMap() {
         }
     });
 
+    // Places makers on center point of all locations
     var marker = new google.maps.Marker({
       position: center,
       map: map,
     });
 
+    // Places radius around center markers. Radius value is taken from radius slider
     var circle = new google.maps.Circle({
       map: map,
       radius: slideVal * 2,    // 10 miles in metres
