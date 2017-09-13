@@ -2,7 +2,6 @@ var map;
 var markers = [];
 var slideVal = 500;
 
-// Allows users to select radius range
 function radiusSlider() {
   var slider = document.getElementById("myRange");
   var output = document.getElementById("demo");
@@ -13,11 +12,84 @@ function radiusSlider() {
   }
 }
 
+// Creates Point A and B search location bars + autocomplete.
+
+
+
+function searchBarA() {
+
+  var input = document.getElementById('pac-input');
+  var autocompleteA = new google.maps.places.Autocomplete(input);
+
+  autocompleteA.addListener('place_changed', function() {
+
+    var lonLatA = [];
+
+    var placeA = autocompleteA.getPlace();
+
+    lonLatA.push(placeA.geometry.location.lat());
+    lonLatA.push(placeA.geometry.location.lng());
+
+    locations.push(lonLatA);
+    var markerA = {lat: lonLatA[0], lng: lonLatA[1]};
+    var marker = new google.maps.Marker({
+      position: markerA,
+      map: map
+    });
+    markers.push(marker);
+
+    if (placeA.geometry.viewport) {
+      map.fitBounds(placeA.geometry.viewport);
+    } else {
+      map.setCenter(placeA.geometry.viewport);
+      map.setZoom(15);
+    }
+
+  })
+}
+
+function searchBarB() {
+
+  var output = document.getElementById('pac-output');
+  var autocompleteB = new google.maps.places.Autocomplete(output);
+
+  autocompleteB.addListener('place_changed', function() {
+
+    var lonLatB = [];
+
+    var placeB = autocompleteB.getPlace();
+
+
+    lonLatB.push(placeB.geometry.location.lat());
+    lonLatB.push(placeB.geometry.location.lng());
+
+
+    locations.push(lonLatB);
+
+    var markerB = {lat: lonLatB[0], lng: lonLatB[1]};
+    var marker = new google.maps.Marker({
+      position: markerB,
+      map: map
+    });
+    markers.push(marker);
+
+    if (placeB.geometry.viewport) {
+      map.fitBounds(placeB.geometry.viewport);
+    } else {
+      map.setCenter(placeB.geometry.viewport);
+      map.setZoom(15);
+    }
+
+  });
+
+}
+
+
 // Initializes map
 
 function initMap() {
 
-  var locations = [];
+  locations = [];
 
 // Creates map and sets starting view and zoom. Styles allows for custom map styles.
   map = new google.maps.Map(document.getElementById('map'), {
@@ -90,18 +162,11 @@ function initMap() {
 ]
   });
 
+  // Listens for autocomplete location bar A
+  searchBarA();
 
-// Creates Point A and B search location bars + autocomplete.
-
-
-  var input = document.getElementById('pac-input');
-  var output = document.getElementById('pac-output');
-  var submit = document.getElementById('submit');
-
-  var autocompleteA = new google.maps.places.Autocomplete(input);
-  var autocompleteB = new google.maps.places.Autocomplete(output);
-
-
+  // Listens for autocomplete location bar B
+  searchBarB();
 
   // Allows users to select radius range
   radiusSlider();
@@ -154,63 +219,7 @@ function initMap() {
   })
 }
 
-  // Listens for autocomplete location bar A
-
-  autocompleteA.addListener('place_changed', function() {
-    var lonLatA = [];
-
-
-    var placeA = autocompleteA.getPlace();
-    console.log(placeA);
-    lonLatA.push(placeA.geometry.location.lat());
-    lonLatA.push(placeA.geometry.location.lng());
-
-    locations.push(lonLatA);
-    var markerA = {lat: lonLatA[0], lng: lonLatA[1]};
-    var marker = new google.maps.Marker({
-      position: markerA,
-      map: map
-    });
-    markers.push(marker);
-
-    if (placeA.geometry.viewport) {
-      map.fitBounds(placeA.geometry.viewport);
-    } else {
-      map.setCenter(placeA.geometry.viewport);
-      map.setZoom(15);
-    }
-
-  })
-
-  // Listens for autocomplete location bar B
-
-  autocompleteB.addListener('place_changed', function() {
-
-    var lonLatB = [];
-
-    var placeB = autocompleteB.getPlace();
-
-
-    lonLatB.push(placeB.geometry.location.lat());
-    lonLatB.push(placeB.geometry.location.lng());
-
-
-    locations.push(lonLatB);
-
-    var markerB = {lat: lonLatB[0], lng: lonLatB[1]};
-    var marker = new google.maps.Marker({
-      position: markerB,
-      map: map
-    });
-    markers.push(marker);
-
-    if (placeB.geometry.viewport) {
-      map.fitBounds(placeB.geometry.viewport);
-    } else {
-      map.setCenter(placeB.geometry.viewport);
-      map.setZoom(15);
-    }
-
+    var submit = document.getElementById('submit');
 
     // Click function for submit button
 
@@ -364,7 +373,7 @@ function initMap() {
 
   })
 
-});
+
 
 
   function reload(locations) {
