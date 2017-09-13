@@ -2,6 +2,16 @@ var map;
 var markers = [];
 var slideVal = 500;
 
+// Allows users to select radius range
+function radiusSlider() {
+  var slider = document.getElementById("myRange");
+  var output = document.getElementById("demo");
+  output.innerHTML = (slider.value / 1000);
+  slider.oninput = function() {
+    slideVal = this.value;
+    output.innerHTML = (this.value / 1000) ;
+  }
+}
 
 // Initializes map
 
@@ -81,7 +91,8 @@ function initMap() {
   });
 
 
-  // Creates Point A and B search location bars + autocomple.
+// Creates Point A and B search location bars + autocomplete.
+
 
   var input = document.getElementById('pac-input');
   var output = document.getElementById('pac-output');
@@ -91,15 +102,9 @@ function initMap() {
   var autocompleteB = new google.maps.places.Autocomplete(output);
 
 
-  // Allows users to select radius range
 
-  var slider = document.getElementById("myRange");
-  var output = document.getElementById("demo");
-  output.innerHTML = (slider.value / 1000);
-  slider.oninput = function() {
-  slideVal = this.value;
-  output.innerHTML = (this.value / 1000) ;
-  }
+  // Allows users to select radius range
+  radiusSlider();
 
   // Allows for adding additional locations bars.
 
