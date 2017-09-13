@@ -29,8 +29,9 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li class="active"><%= link_to 'Home', home_index_path %></li>
                 <% if session[:user_id] != nil %>
+                  <li><%= link_to 'Hi ' + current_user.first_name + ',', home_index_path %></li>
+                  <li class="active"><%= link_to 'Home', home_index_path %></li>
                   <li><%= link_to 'Back to Map', map_index_path %></li>
                   <li><%= link_to "Logout", :logout%></li>
                 <% else %>

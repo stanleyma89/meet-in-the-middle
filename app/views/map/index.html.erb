@@ -86,7 +86,85 @@
 
 <% else %>
 
-  <section class="row" id="top_row">
+<section class="row" id="top_row">
+  <div class="col-md-12 big-cont">
+    <div class="col-sm-12 col-md-5 menu-box">
+      <div class="menu-inner-box">
+        <div class="col-md-8 row">
+          <div id="pac-container">
+            <ul id = "address-container">
+            <li id = "address">
+            <input class="input-lg" id="pac-input" type="text"
+              placeholder="Point A"></li>
+            <li id = "address">
+              <input class="input-lg" id="pac-output" type="text"
+             placeholder="Point B"></li>
+            </ul>
+          </div>
+      </div>
+
+      <div class="col-md-4 row">
+        <div class="col-sm-6 col-md-12">
+          <button class="btn-default btn-lg btn-mrg" id = "add" type="button" name="add" style="display: none">Add Address</button>
+        </div>
+        <div class="col-sm-6 col-md-12">
+          <select class="form-control btn-lg btn-mrg" id = "categories" style="display: none">
+            <option value="restaurants">Restaurant</option>
+            <option value="bars">Bar</option>
+            <option value="cafe">Cafe</option>
+            <option value="fitness">Fitness</option>
+            <option value="movietheaters">Movie Theater</option>
+            <option value="golf">Golf</option>
+            <option value="bowling">Bowling</option>
+          </select>
+          <div class="row">
+            <input type="button" class="btn-default btn-lg btn-mrg" id="reset-btn" value = "Refresh Page" onClick = "window.location.reload()" style="display: none">
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+      <div class="col-md-8 col-md-offset-2 row slide">
+
+
+        <div id="slidecontainer" style="display: none">
+          <input type="range" min="500" max="1500" value="50" class="slider" id="myRange" style="display: none">
+          <p class="radius-num"><span id="demo" style="display: none"></span > KM</p>
+        </div>
+      </div>
+
+      <div class="col-md-8 col-md-offset-2 row submitbutton">
+        <input class="btn-block btn-primary" id = "submit" type="submit" name="submit" href="#map" value="Meet In The Middle!">
+      </div>
+    </div>
+
+  </div>
+
+    <div class="container-fluid map-container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 map_pos">
+          <div id="map"></div>
+
+
+        </div>
+      </div>
+    </div>
+</div>
+
+</section>
+
+<!-- <div class="container"> -->
+  <div class="row">
+    <div class="col-sm-12 photos">
+      <div id="yelp_info"></div>
+    </div>
+  </div>
+<!-- </div> -->
+
+  <!-- <section class="row" id="top_row">
     <div class="col-lg-12 big-cont">
       <div class="col-lg-5 col-md-5 menu-box">
         <div class="menu-inner-box">
@@ -149,6 +227,6 @@
 
   <div class="photos">
     <div id="yelp_info"></div>
-  </div>
+  </div> -->
 
 <% end %>
