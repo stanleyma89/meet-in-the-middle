@@ -209,7 +209,18 @@ function initMap() {
 
     // Click function for submit button
 
+    // $("submit").click(function() {
+    //     $('html,body').animate({
+    //         scrollTop: $("#map").offset().top},
+    //         'slow');
+    // });
+
+
     submit.addEventListener('click', function(){
+
+      var scrollmap = document.getElementById('map');
+      scrollmap.scrollIntoView({alignToTop: true, behavior: "smooth"});
+
 
       for (var i = 0; i < markers.length; i++) {
         markers[i].setMap(null);
@@ -342,6 +353,7 @@ function initMap() {
         }
     });
 
+
     // Places makers on center point of all locations
     var marker = new google.maps.Marker({
       position: center,
@@ -356,7 +368,6 @@ function initMap() {
       fillColor: '#AA0000'
     });
     circle.bindTo('center', marker, 'position');
-
   })
 
 });

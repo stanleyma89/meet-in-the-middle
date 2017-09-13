@@ -6,7 +6,7 @@
 
   <section class="row" id="top_row">
     <div class="col-md-12 big-cont">
-      <div class="col-md-5 col-sm-12 menu-box">
+      <div class="col-sm-12 col-md-5 menu-box">
         <div class="menu-inner-box">
           <div class="col-md-8 row">
             <div id="pac-container">
@@ -22,10 +22,10 @@
         </div>
 
         <div class="col-md-4 row">
-          <div class="col-xs-6">
+          <div class="col-sm-6 col-md-12">
             <button class="btn-default btn-lg btn-mrg" id = "add" type="button" name="add">Add Address</button>
           </div>
-          <div class="col-xs-6">
+          <div class="col-sm-6 col-md-12">
             <select class="form-control btn-lg btn-mrg" id = "categories" style>
               <option value="restaurants">Restaurant</option>
               <option value="bars">Bar</option>
@@ -35,14 +35,14 @@
               <option value="golf">Golf</option>
               <option value="bowling">Bowling</option>
             </select>
+            <div class="row">
+              <input type="button" class="btn-default btn-lg btn-mrg" id="reset-btn" value = "Refresh Page" onClick = "window.location.reload()">
+            </div>
           </div>
 
 
 
 
-        </div>
-        <div class="row">
-          <input type="button" class="btn-default btn-lg btn-mrg" id="reset-btn" value = "Refresh Page" onClick = "window.location.reload()">
         </div>
 
         <div class="col-md-8 col-md-offset-2 row slide">
@@ -56,31 +56,33 @@
         </div>
 
         <div class="col-md-8 col-md-offset-2 row submitbutton">
-          <input class="btn-block btn-primary" id = "submit" type="submit" name="submit" value="Meet In The Middle!">
+          <input class="btn-block btn-primary" id = "submit" type="submit" name="submit" href="#map" value="Meet In The Middle!">
         </div>
       </div>
 
     </div>
 
-    <div class="row">
-      <div class="container map-container">
-        <div class="col-md-6 col-xs-12 map_pos">
-          <div id="map"></div>
+      <div class="container-fluid map-container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 map_pos">
+            <div id="map"></div>
+
+
+          </div>
         </div>
       </div>
-    </div>
+  </div>
 
-
-    </div>
   </section>
 
-  <div class="row">
-    <div class="container">
-      <div class="photos">
+  <!-- <div class="container"> -->
+    <div class="row">
+      <div class="col-sm-12 photos">
         <div id="yelp_info"></div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
+
 
 <% else %>
 
