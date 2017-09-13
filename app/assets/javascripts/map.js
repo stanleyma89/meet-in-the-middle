@@ -1,6 +1,7 @@
 var map;
 var markers = [];
 var slideVal = 500;
+var locations = [];
 
 function radiusSlider() {
   var slider = document.getElementById("myRange");
@@ -84,12 +85,60 @@ function searchBarB() {
 
 }
 
+function additionalLocationBar() {
+
+  var addressContainer = document.getElementById("address-container");
+  var add = document.getElementById("add");
+
+  add.addEventListener("click", function(e){
+    var addressList = document.createElement("li");
+    var addressInput = document.createElement("input");
+    var autocompleteC = new google.maps.places.Autocomplete(addressInput);
+
+    autocomplete(autocompleteC);
+    addressList.id = "address"
+    addressInput.type = "text";
+    addressInput.id = "pac-input";
+    addressInput.className = "input-lg";
+    addressInput.placeholder = "Add Address";
+    addressList.append(addressInput);
+    addressContainer.append(addressList);
+  });
+
+}
+
+function autocomplete(autocompleteC) {
+  autocompleteC.addListener('place_changed', function() {
+    var lonLatC = [];
+
+
+    var placeC = autocompleteC.getPlace();
+    console.log(placeC);
+    lonLatC.push(placeC.geometry.location.lat());
+    lonLatC.push(placeC.geometry.location.lng());
+
+    locations.push(lonLatC);
+    var markerC = {lat: lonLatC[0], lng: lonLatC[1]};
+    var marker = new google.maps.Marker({
+      position: markerC,
+      map: map
+    });
+    markers.push(marker);
+
+    if (placeC.geometry.viewport) {
+      map.fitBounds(placeC.geometry.viewport);
+    } else {
+      map.setCenter(placeC.geometry.viewport);
+      map.setZoom(12);
+    }
+
+  })
+}
 
 // Initializes map
 
 function initMap() {
 
-  locations = [];
 
 // Creates map and sets starting view and zoom. Styles allows for custom map styles.
   map = new google.maps.Map(document.getElementById('map'), {
@@ -172,52 +221,11 @@ function initMap() {
   radiusSlider();
 
   // Allows for adding additional locations bars.
-
-  var addressContainer = document.getElementById("address-container");
-  var add = document.getElementById("add");
-  add.addEventListener("click", function(e){
-    var addressList = document.createElement("li");
-    var addressInput = document.createElement("input");
-    var autocompleteC = new google.maps.places.Autocomplete(addressInput);
-    autocomplete(autocompleteC);
-    addressList.id = "address"
-    addressInput.type = "text";
-    addressInput.id = "pac-input";
-    addressInput.className = "input-lg";
-    addressInput.placeholder = "Add Address";
-    addressList.append(addressInput);
-    addressContainer.append(addressList);
-  });
+  additionalLocationBar();
+  
 
 
 
-  function autocomplete(autocompleteC) {
-    autocompleteC.addListener('place_changed', function() {
-      var lonLatC = [];
-
-
-      var placeC = autocompleteC.getPlace();
-      console.log(placeC);
-      lonLatC.push(placeC.geometry.location.lat());
-      lonLatC.push(placeC.geometry.location.lng());
-
-      locations.push(lonLatC);
-      var markerC = {lat: lonLatC[0], lng: lonLatC[1]};
-      var marker = new google.maps.Marker({
-        position: markerC,
-        map: map
-      });
-      markers.push(marker);
-
-      if (placeC.geometry.viewport) {
-        map.fitBounds(placeC.geometry.viewport);
-      } else {
-        map.setCenter(placeC.geometry.viewport);
-        map.setZoom(12);
-      }
-
-  })
-}
 
     var submit = document.getElementById('submit');
 
