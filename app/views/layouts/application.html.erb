@@ -10,9 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <%= yield :custom_head_content %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -49,16 +46,12 @@
       </div>
     </nav>
 
-
-
     <% flash.each do |key, message| %>
       <div class="flash"<%= key %>"><%= message %></div>
     <% end %>
 
     <%= yield %>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwrmLv6COx0ygAhr9pKrEbDRcaoFQORyM&callback=initMap&libraries=geometry,places"></script>
-
-
     <div class="container marketing">
       <footer>
         <p>&copy; 2017 Meet in the Middle.</p>
