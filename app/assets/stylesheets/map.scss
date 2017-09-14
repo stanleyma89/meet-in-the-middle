@@ -424,7 +424,7 @@ input:focus ~ .highlight {
   font-size: 14px;
 }
 
-@media all and (min-width : 320px) and (max-width : 480px) {
+@media all and (min-width : 320px) and (max-width : 768px) {
     #yelp_info {
     text-align: center;
     margin-top: 340px;
