@@ -427,10 +427,12 @@ input:focus ~ .highlight {
 @media all and (max-width: 768px) {
     #yelp_info {
     text-align: center;
-    margin: 340px 80px;
+    margin-top: 340px;
+    margin-left: auto;
+    margin-right: auto;
  }
-
 }
+
 
 @media all and (max-width: 992px) {
   .menu-box {
@@ -508,31 +510,11 @@ input:focus ~ .highlight {
     padding-left: 0;
     padding-right: 0;
   }
-
-
 }
 
-/* Media queries ------------------------------------Custom, iPhone Retina */
-// @media only screen and (min-width : 320px) {
-//
-// }
-//
-// /* Extra Small Devices, Phones */
-// @media only screen and (min-width : 480px) {
-//
-// }
-//
-// /* Small Devices, Tablets */
-// @media only screen and (min-width : 768px) {
-//
-// }
-//
-// /* Medium Devices, Desktops */
-// @media only screen and (min-width : 992px) {
-//
-// }
-//
-// /* Large Devices, Wide Screens */
-// @media only screen and (min-width : 1200px) {
-//
-// }
+
+@media all and (max-width: 1600px) {
+  .btn-lg, .btn-group-lg > .btn {
+    font-size: 11px;
+  }
+}
