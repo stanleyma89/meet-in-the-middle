@@ -218,9 +218,6 @@ function initMap() {
 
     submit.addEventListener('click', function(){
 
-      var scrollmap = document.getElementById('map');
-      scrollmap.scrollIntoView({alignToTop: true, behavior: "smooth"});
-
 
       for (var i = 0; i < markers.length; i++) {
         markers[i].setMap(null);
