@@ -95,6 +95,7 @@ function autocomplete(autocompleteC) {
 
     var placeC = autocompleteC.getPlace();
     console.log(placeC);
+    console.log(lonLatC);
     lonLatC.push(placeC.geometry.location.lat());
     lonLatC.push(placeC.geometry.location.lng());
 
