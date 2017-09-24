@@ -2,7 +2,7 @@
 <%= javascript_include_tag 'map' %>
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
-<% if current_user %>
+<!-- place if statment HERE to enable authorization -->
 
   <section class="row" id="top_row">
     <div class="col-md-12 big-cont">
@@ -79,7 +79,12 @@
         <div id="yelp_info"></div>
       </div>
 
-<% else %>
+<!-- Uncomment all lines below to enable authorization   -->
+
+<!-- place if statment on line 5 -->
+
+<!-- <% if current_user %> -->
+<!-- <% else %>
 
 <section class="row" id="top_row">
   <div class="col-md-12 big-cont">
@@ -159,4 +164,4 @@
   </div>
 </div>
 
-<% end %>
+<% end %> -->
